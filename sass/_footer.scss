@@ -1,0 +1,187 @@
+footer{
+    width: 100%;
+    min-height: 211px;
+    background-color: #00080d;
+    position: relative;
+    &:before{
+        @include pseudo;
+        top: 69px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 100%;
+        height: 1px;
+        background-color: #2bb7da;
+    }
+}
+.footer-top{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 70px;
+    width: 100%;
+    flex-wrap: wrap;
+    li{
+        margin-right: 36px;
+        flex-shrink: 0;
+        a{
+            color: white;
+            font-family: "Open Sans";
+            font-size: 16px;
+            font-weight: 300;
+        }
+        &:last-of-type{
+            margin-right: 0;
+        }
+    }
+}
+.footer-bottom{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 141px;
+    &-copyright{
+        p:first-of-type{
+            font-family: "Open Sans";
+            font-weight: 300;
+            line-height: 24px;
+            color: #fefefe;
+            font-size: 16px;
+            max-width: 215px;
+            margin-bottom: 11px;
+        }
+        p:last-of-type{
+            font-family: "Open Sans";
+            font-weight: 300;
+            line-height: 24px;
+            color: #959595;
+            font-size: 14px;
+        }
+    }
+    &-contacts{
+        .footer-bottom-phones-list{
+            margin-bottom: 6px;
+            .main-phone{
+                a{
+                    color: #fefefe;
+                    font-family: "Open Sans";
+                    font-weight: 300;
+                    font-size: 28px;
+                    line-height: 33px;
+                }
+            }
+            .more-phones{
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                a{
+                    color: #fefefe;
+                    font-family: "Open Sans";
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-right: 3px;
+                }
+            }
+        }
+        .footer-bottom-address{
+            color: #fefefe;
+            font-family: "Open Sans";
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 36px;
+        }
+    }
+    &-social{
+        .footer-bottom-social-list{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            li{
+                margin-left: 8px;
+            }
+        }
+        .site-creation{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-items: flex-end;
+            height: 24px;
+            margin-top: 30px;
+            text-align: right;
+            span{
+                color: white;
+                font-family: "Open Sans";
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 1;
+                margin-right: 8px;
+            }
+            img{
+                margin-top: -2px;
+            }
+        }
+    }
+}
+.footer-mobile{
+    display: none;
+    .phones-tooltip{
+        position: absolute;
+        right: 0;
+        bottom: 30px;
+        width: 184px;
+        height: 123px;
+        background-color: white;
+        border: 4px solid #50bdf3;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include transition(all .5s ease);	
+        @include opacity(0);
+        visibility: hidden;
+        a{
+            color: black;
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            margin-bottom: 10px;
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+        &:before{
+            @include pseudo;
+            bottom: -7px;
+            width: 5px;
+            height: 5px;
+            background: #fff;
+            border-left: 4px solid #50bdf3;
+            border-top: 4px solid #50bdf3;
+            transform: rotate(-135deg);
+        }
+    }
+}
