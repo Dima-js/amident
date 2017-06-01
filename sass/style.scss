@@ -1,0 +1,15 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "sass/includes/_normalize";
+@import "sass/includes/_fonts";
+@import "sass/includes/_family";
+@import "sass/includes/_mixins";
+@import "sass/includes/_base";
+@import "sass/includes/_typography";
+@import "sass/includes/_sprite";
+@import "sass/includes/_main";
+@import "sass/_header";
+@import "sass/includes/_media";

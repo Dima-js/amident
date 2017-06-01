@@ -1,0 +1,48 @@
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+  padding: 0;
+}
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;	
+}
+a:focus,
+input:focus,
+button:focus{
+	outline: none;
+	text-decoration: none;
+}
+
+//.bold{
+//	font-weight: 700;
+//}
+//.semi{
+//	font-weight: 600;
+//}
+//.regular{
+//	font-weight: 400;
+//}
+//.light{
+//	font-weight: 300;
+//}
+//.med{
+//    font-weight: 500;
+//}
+
+
+//COLOR PALLETE
+$text: #6d6e71;
+$blue: #1faae2;
+
+p,
+a,
+h1,
+h2,
+h3,
+div{
+	color: $text;
+}

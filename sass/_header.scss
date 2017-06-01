@@ -1,0 +1,40 @@
+header{
+
+}
+.wrapper{
+ max-width: 1220px;
+ padding-right: 15px;
+ padding-left: 15px;
+ margin-right: auto;
+ margin-left: auto;
+}
+.wrap_header{
+ .slogan{
+  width: 33.333%;
+  float: left;
+  text-align: left;
+  font-family: OpenSans;
+  font-size: 16px;
+  font-weight: 300;
+  color: #000000;
+  margin-top: 22px;
+ }
+
+ .logo{
+  width: 33.333%;
+  display: inline-block;
+  padding-top: 4px;
+  padding-bottom: 3px;
+ }
+ .wrap_min-top-menu{
+  width: 33.333%;
+  text-align: right;
+  float: right;
+  padding-top: 31px;
+  a{
+   display: inline-block;
+   margin-left: 25px;
+  }
+ }
+
+}
