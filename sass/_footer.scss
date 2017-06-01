@@ -20,19 +20,21 @@ footer{
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     min-height: 70px;
     width: 100%;
-    flex-wrap: wrap;
-    li{
-        margin-right: 36px;
+    li{        
         flex-shrink: 0;
         a{
             color: white;
             font-family: "Open Sans";
             font-size: 16px;
             font-weight: 300;
+            @include transition(all .1s ease);	
+            &:hover{
+                font-weight: 700;
+            }
         }
         &:last-of-type{
             margin-right: 0;
