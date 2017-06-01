@@ -59,6 +59,9 @@
                     font-size: 18px;
                     line-height: 22px;
                     font-weight: 400;
+                    &:hover{
+                        font-weight: 700;
+                    }
                 }
                 .reviews-categories__current{
                     font-weight: 700;
@@ -140,12 +143,15 @@
                         border: 4px solid #959595;
                         position: relative;
                         background-color: white;
+                        margin-left: 30px;
                         .patients-reviews-question{
                             position: relative;
                             height: 125px;
                             padding: 13px 27px 36px 27px;
                             @include transition(all .5s ease);
+                            text-align: center;
                             .patients-reviews-question__author{
+                                text-align: left;
                                 color: #202020;
                                 font-family: "Open Sans";
                                 font-size: 18px;
@@ -153,6 +159,7 @@
                                 font-weight: 700;
                             }
                             .patients-reviews-question__text{
+                                text-align: left;
                                 color: #202020;
                                 font-family: "Open Sans";
                                 font-size: 18px;
@@ -174,13 +181,14 @@
                                 line-height: 22px;
                             }
                             .patients-reviews-question__show-more{
-                                position: absolute;
-                                bottom: -17px;
-                                right: 0;
-                                left: 0;
+                                position: relative;
+                                bottom: -20px;
                                 margin: 0 auto;
-                                @include df;
-                                width: 225px;
+                                display: inline-block;
+                                text-align: center;
+                                padding-top: 2px;
+                                min-width: 195px;
+                                width: auto;
                                 height: 30px;
                                 background-color: #959595;
                                 color: black;
@@ -203,6 +211,17 @@
                                     top: 0;
                                     @include css-triangle(#959595, left, 15.2px, absolute, false);
                                 }                                
+                            }
+                            .patients-reviews-question__close{
+                                display: none;
+                                position: absolute;
+                                width: 20px;
+                                height: 20px;
+                                left: 0;
+                                right: 0;
+                                margin: 0 auto;
+                                bottom: 5px;
+                                transform: rotate(-90deg);
                             }
                         }
                         .patients-reviews-answer{
@@ -238,7 +257,7 @@
                                 font-weight: 400;
                                 line-height: 22px;
                             }
-                            .patients-reviews-question__close{
+                            .patients-reviews-show_all{
                                 position: absolute;
                                 bottom: -19px;
                                 right: 0;
@@ -247,7 +266,7 @@
                                 @include df;
                                 width: 225px;
                                 height: 30px;
-                                background-color: #fff;
+                                background-color: #959595;
                                 color: black;
                                 font-family: "Open Sans";
                                 font-size: 16px;
@@ -257,13 +276,13 @@
                                     @include pseudo;
                                     right: 0px;
                                     top: 0;
-                                    @include css-triangle(#fff, right, 15.2px, absolute, false);
+                                    @include css-triangle(#959595, right, 15.2px, absolute, false);
                                 }
                                 &:before{
                                     @include pseudo;
                                     left: 0;
                                     top: 0;
-                                    @include css-triangle(#fff, left, 15.2px, absolute, false);
+                                    @include css-triangle(#959595, left, 15.2px, absolute, false);
                                 }
                             }
                         }
@@ -276,6 +295,10 @@
                                 .patients-reviews-question__show-more{
                                     @include opacity(0);
                                     visibility: hidden;
+                                    display: none;
+                                }
+                                .patients-reviews-question__close{
+                                    display: block;
                                 }
                             }
                             .patients-reviews-answer{
@@ -343,6 +366,129 @@
         }
     }
 }
+.give-review-popup-content{
+    position: relative;
+    width: 632px;
+    min-height: 485px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #e6e6e8;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    padding: 26px 26px 20px 43px;
+    >p{
+        color: #202020;
+        font-family: "Open Sans";
+        font-size: 40px;
+        font-weight: 300;
+        line-height: 50px;
+        margin-bottom: 31px;
+    }
+    .give-review-popup__form-field{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;     
+        justify-content: space-between;
+        margin-bottom: 30px;
+        label{
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            color: #202020;
+            font-family: "Open Sans";
+            span{
+                color: #f21111;
+            }
+        }
+        input{
+            width: 480px;
+            height: 40px;
+            background-color: white;
+            border: 2px solid #e6e6e8;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            color: #202020;
+            font-family: "Open Sans";
+        }
+        textarea{
+            width: 480px;
+            max-width: 480px;
+            height: 105px;
+            max-height: 200px;
+            background-color: white;
+            border: 2px solid #e6e6e8;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            color: #202020;
+            font-family: "Open Sans";
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+    .give-review-popup__captcha-field{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        label{
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            color: #202020;
+            font-family: "Open Sans";
+            span{
+                color: #f21111;
+            }
+        }
+        input{
+            width: 93px;
+            height: 40px;
+            background-color: white;
+            border: 2px solid #e6e6e8;
+            padding-left: 5px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            color: #202020;
+            font-family: "Open Sans";
+        }
+        .review-captcha{
+            margin-left: 20px;
+        }
+    }
+    .give-review-popup__send{
+        width: 130px;
+        height: 48px;
+        background-color: #50bdf3;
+        border: none;
+        color: white;
+        font-family: "Open Sans";
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+    .mfp-close{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 19px;
+        right: 19px;
+        font-size: 0;
+        opacity: 1;
+        background: url(/img/close-icon.png) no-repeat 50% 50%;
+    }
+}
 //breadcrumbs
 .breadcrumbs{
     display: -webkit-flex;
@@ -369,14 +515,13 @@
             display: block;
             position: absolute;
             right: 0;
-            top: 0;
+            top: 1px;
             width: 6px;
             height: 10px;
             color: black;
             font-family: "Open Sans";
             font-size: 14px;
             font-weight: 300;
-            line-height: 28px;
         }
     }
 }

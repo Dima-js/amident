@@ -35,6 +35,8 @@
     <meta property="og:url" content="Site url" />
     <title>Аминдент | Отзывы</title>
     <link rel="shortcut icon" href="favicon.png" />
+    <!-- Magnific Popup core CSS file -->
+	<link type="text/css" href="libs/magnific/magnific-popup.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css" />
 </head>
 <body>
@@ -165,7 +167,7 @@
                 <div class="reviews-page-info">
                     <p>В нашей клинике работает профессиональный и внимательный персонал. Каждые три месяца наши врачи посещают стоматологические образовательные конференции, семинары и мастер классы для повышения квалификации. В нашей клинике работает первый и единственный победитель Российского и Международного чемпионата по художественной реставрации зубов к.м.н., врач высшей категории. Стоматология без боли - это не миф. Сегодняшние технологии позволяют нам проводить даже самые сложные процедуры безболезненно и эффективно.</p>
                 </div>
-                <a href="#" class="leave-review">Оставить отзыв</a> 
+                <a href="#give-review-popup" class="leave-review">Оставить отзыв</a> 
                 <div class="patients-reviews">
                     <h2 class="patients-reviews__title">Отзывы пациентов</h2>    
                     <ul class="patients-reviews-list">
@@ -184,12 +186,13 @@
                                     </p>
                                     <span class="patients-reviews-question__date">28 октября 2017 г.</span>
                                     <a href="#" class="patients-reviews-question__show-more" title="Показать полностью">Показать полностью</a>
+                                    <a href="#" class="patients-reviews-question__close" title="Свернуть"><img src="/img/arrow-up.png" alt="Свернуть"></a>
                                 </div>
                                 <div class="patients-reviews-answer">
                                     <h3 class="patients-reviews-answer__author">Отвечает: Закаров Амин Магомедович</h3>
                                     <p class="patients-reviews-answer__text">Благодарим за отзыв, будем рады видеть у нас снова, постоянным клиентам мы дарим скидки и устраиваем акции.</p>
                                     <span class="patients-reviews-answer__date">29 октября 2017 г.</span>
-                                    <a href="#" class="patients-reviews-question__close" title="Закрыть">Закрыть</a>
+                                    <a href="#" class="patients-reviews-show_all" title="Смотреть все отзывы">Смотреть все отзывы</a>
                                 </div>
                             </div>
                         </li>
@@ -208,12 +211,13 @@
                                     </p>
                                     <span class="patients-reviews-question__date">28 октября 2017 г.</span>
                                     <a href="#" class="patients-reviews-question__show-more" title="Показать полностью">Показать полностью</a>
+                                    <a href="#" class="patients-reviews-question__close" title="Свернуть"><img src="/img/arrow-up.png" alt="Свернуть"></a>
                                 </div>
                                 <div class="patients-reviews-answer">
                                     <h3 class="patients-reviews-answer__author">Отвечает: Закаров Амин Магомедович</h3>
                                     <p class="patients-reviews-answer__text">Благодарим за отзыв, будем рады видеть у нас снова, постоянным клиентам мы дарим скидки и устраиваем акции.</p>
                                     <span class="patients-reviews-answer__date">29 октября 2017 г.</span>
-                                    <a href="#" class="patients-reviews-question__close" title="Закрыть">Закрыть</a>
+                                    <a href="#" class="patients-reviews-show_all" title="Смотреть все отзывы">Смотреть все отзывы</a>
                                 </div>
                             </div>
                         </li>
@@ -232,13 +236,8 @@
                                     </p>
                                     <span class="patients-reviews-question__date">28 октября 2017 г.</span>
                                     <a href="#" class="patients-reviews-question__show-more" title="Показать полностью">Показать полностью</a>
-                                </div>
-                                <div class="patients-reviews-answer">
-                                    <h3 class="patients-reviews-answer__author">Отвечает: Закаров Амин Магомедович</h3>
-                                    <p class="patients-reviews-answer__text">Благодарим за отзыв, будем рады видеть у нас снова, постоянным клиентам мы дарим скидки и устраиваем акции.</p>
-                                    <span class="patients-reviews-answer__date">29 октября 2017 г.</span>
-                                    <a href="#" class="patients-reviews-question__close" title="Закрыть">Закрыть</a>
-                                </div>
+                                    <a href="#" class="patients-reviews-question__close" title="Свернуть"><img src="/img/arrow-up.png" alt="Свернуть"></a>
+                                </div>                                
                             </div>
                         </li>
                     </ul> 
@@ -373,6 +372,28 @@
             </div>
         </div>
     </footer>    
+    <!--give-review-popup-->
+    <div id="give-review-popup" class="give-review-popup-content mfp-hide">
+        <p class="give-review-popup__title">Оставить отзыв</p>
+        <form action="">
+            <div class="give-review-popup__form-field">
+                <label for="give-review-popup__name">Имя:<span>*</span></label>
+                <input type="text" name="your-name" id="give-review-popup__name" />
+            </div>
+            <div class="give-review-popup__form-field">
+                <label for="give-review-popup__message">Отзыв:<span>*</span></label>
+                <textarea name="your-review" id="give-review-popup__message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="give-review-popup__captcha-field">
+                <label for="give-review-popup__captcha">Код подтверждения:<span>*</span></label>
+                <input type="text" name="your-captcha" id="give-review-popup__captcha" />
+                <div class="review-captcha">
+                    <img src="/img/protective-characters.png" alt="Captcha">
+                </div>
+            </div>
+            <button type="submit" class="give-review-popup__send">Отправить</button>            
+        </form>
+    </div>
     <!--[if lt IE 9]>
 		<script src="libs/html5shiv/es5-shim.min.js"></script>
 		<script src="libs/html5shiv/html5shiv.min.js"></script>
@@ -380,6 +401,8 @@
 		<script src="libs/respond/respond.min.js"></script>		
 	<![endif]-->
 	<script src="libs/jquery/jquery-3.1.1.min.js"></script>	
+    <!--popup-->
+	<script src="libs/magnific/jquery.magnific-popup.min.js"></script>	
 	<!--humburger menu-->
 	<script src="js/humburgerMenu.js"></script>
 	<!--custom js-->
