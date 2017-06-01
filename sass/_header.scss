@@ -1,12 +1,4 @@
-.clearfix:before,
-.clearfix:after {
- content: " ";
- display: table;
-}
-
-.clearfix:after {
- clear: both;
-}
+/* header*/
 header{
  background-color: #ededed;
 }
@@ -115,3 +107,5 @@ nav{
  width: 50%;
  left: 25%;
 }
+
+/*end header*/
