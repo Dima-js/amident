@@ -7,11 +7,21 @@
     .footer-top{
         li{        
             a{
-                font-size: 14px;
+                font-size: 16px;
             }   
         }
     }
 }
+// header
+//nav .wrap_nav ul li:not(:last-child) a {
+//    padding: 15px 20px 11px 20px;
+//}
+//nav .wrap_nav ul li:last-child a {
+//    padding: 15px 0 11px 20px;
+//}
+//nav .wrap_nav ul li a {
+//    font-size: 14px;
+//}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
@@ -23,21 +33,38 @@
             }   
         }
     }
+    // header
+    nav .wrap_nav ul li a {
+        font-size: 12px;
+    }
+    nav .wrap_nav {
+        position: relative;
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+    nav .wrap_nav ul li:not(:last-child) a {
+        padding: 11px 10px 11px 10px;
+    }
+    nav .wrap_nav ul li:last-child a {
+        padding: 11px 0 11px 10px;
+    }
+    nav .wrap_nav .to-home {
+        top: 11px;
+    }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-	header{ 
+
 		//	Humburger
 		.navigation{
-			>div{						
 				nav{
                     div{
                         .toggle-nav{
                             display: block;
-                            width: 54px;
-                            height: 30px;
-                            position: relative;
+                            width: 30px;
+                            height: 27px;
+                            //position: relative;
                             -webkit-transform: rotate(0deg);
                             -moz-transform: rotate(0deg);
                             -o-transform: rotate(0deg);
@@ -47,11 +74,14 @@
                             -o-transition: .5s ease-in-out;
                             transition: .5s ease-in-out;
                             cursor: pointer;
+                            position: absolute;
+                            top: -42px;
+                            left: -13px;
                             span{
                                 display: block;
                                 position: absolute;
-                                height: 2px;
-                                width: 100%;
+                                height: 5px;
+                                width: 30px;
                                 background: #000;
                                 opacity: 1;
                                 left: 0;
@@ -69,10 +99,10 @@
                             }
                             span:nth-of-type(2),
                             span:nth-of-type(3) {
-                                top: 14px;
+                                top: 11px;
                             }
                             span:nth-of-type(4) {
-                                top: 28px;
+                                top: 22px;
                             }			
                         }
                         .toggle-nav.js-active{
@@ -113,10 +143,52 @@
                         }
                     }
                 }
-			}
-		}		
-	}
-    
+
+		}
+    nav .wrap_nav {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .wrap_header .slogan {
+        visibility: hidden;
+    }
+    nav:before {
+        content: '';
+        height: 0px;
+        background: none;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        left: 0;
+        z-index: 1;
+    }
+    nav .wrap_nav .to-home {
+        display: none;
+    }
+    .wrap_header .wrap_min-top-menu a {
+        display: none;
+    }
+    .logo img{
+        width: 133px;
+        height: 50px;
+    }
+    .header-btn-contacts{
+        display: block;
+    }
+    .wrap_header .wrap_min-top-menu {
+        padding-top: 20px;
+        padding-bottom: 13px;
+    }
+    .wrap_header .wrap_min-top-menu .header-btn-contacts {
+        display: block;
+    }
+    .prev{
+        display: block;
+    }
+    // main
+    main{
+        margin-top: 4px;
+    }
 //    footer
     footer{
         &:before{
