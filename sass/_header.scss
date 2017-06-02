@@ -1,6 +1,7 @@
 /* header*/
 header{
  background-color: #ededed;
+ box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -28,13 +29,84 @@ header{
   text-align: right;
   float: right;
   padding-top: 31px;
+  .header-btn-contacts{
+   width: 88px;
+   height: 27px;
+   background-color: #50bdf3;
+   display: none;
+   float: right;
+   color: #ffffff;
+   font-family: 'OpenSans';
+   font-size: 12px;
+   font-weight: 400;
+   line-height:27px ;
+   text-align: center;
+   position: relative;
+   padding-left: 10px;
+   &:before{
+    content: '';
+    background: url("../img/phone-m.png") no-repeat;
+    height: 11px;
+    width: 9px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+   }
+  }
   a{
    display: inline-block;
    margin-left: 25px;
-  }
- }
+   &:nth-child(3) {
+    position: relative;
+    &:hover{
+     .header-tooltip{
+      opacity: 1;
+      visibility: visible;
+     }
+    }
+   }
+    .header-tooltip{
+     position: absolute;
+     top: 24px;
+     right: -75px;
+     background-color: #ffffff;
+     width: 184px;
+     height: 123px;
+     border: 5px solid #4fbef4;
+     z-index: 2;
+     opacity: 0;
+     visibility: hidden;
 
-}
+     .befor-element{
+      position: relative;
+      padding: 17px 9px 11px 5px;
+      &:before{
+       content: '';
+       background: url("../img/rect.png") no-repeat;
+       height: 13px;
+       width: 16px;
+       position: absolute;
+       top: -13px;
+       right: 66px;
+      }
+      p{
+       color: #000000;
+       font-family: 'OpenSans';
+       font-size: 18px;
+       font-weight: 400;
+       line-height: 28px;
+      }
+     }
+    }
+   }
+  }
+
+ }
+//.header-tooltip .active {
+// opacity: 1;
+// visibility: visible;
+//}
+
 .wrapper-nav{
  background-color: #959595;
  max-width: 1368px;
@@ -54,6 +126,7 @@ nav{
   bottom: -4px;
   width: 100%;
   left: 0;
+  z-index: 1;
  }
  .wrap_nav{
   position: relative;
@@ -88,24 +161,78 @@ nav{
      }
     }
     &:not(:last-child) a{
-     padding: 15px 25px 11px 25px;
+     padding: 15px 31px 11px 31px;
     }
     &:last-child a{
-     padding: 15px 0px 11px 25px;
+     padding: 15px 0px 11px 31px;
     }
    }
   }
  }
 }
 
+
+
+.navigation{
+ position: relative;
+}
+.prev{
+ position: absolute;
+ top: 17px;
+ left:15px;
+ color: #353535;
+ line-height: 16px;
+ z-index: 3;
+
+ ///* Text style for "←" */
+ //font-family: Arial;
+ //font-size: 16px;
+ //font-weight: 400;
+ ///* Text style for "Назад" */
+ font-family: 'OpenSans';
+ font-size: 14px;
+ font-weight: 700;
+ display: none;
+}
 .active a:before{
  content: '';
  height: 4px;
- background: #55d4cb;
+ background:  #50bdf3;
  position: absolute;
  bottom: -15px;
  width: 50%;
  left: 25%;
+ z-index: 1;
 }
 
+@media (max-width: 1295px) {
+ .wrap_header .wrap_min-top-menu a .header-tooltip {
+  right: -61px;
+ }
+ .wrap_header .wrap_min-top-menu a .header-tooltip .befor-element:before {
+  right: 56px;
+ }
+}
 /*end header*/
+
+/* for slider */
+.wrap_slider-serteficats{
+ margin-top: 20px;
+ margin-bottom: 20px;
+ .slick-prev:before {
+  content: '';
+  background: url("../img/arrow-left-slider- certificate.png") no-repeat;
+  height: 32px;
+  width: 22px;
+  position: absolute;
+  left: -8px;
+ }
+ .slick-next:before {
+  content: '';
+  background: url("../img/arrow-right-slider-%20certificate.png") no-repeat;
+  height: 32px;
+  width: 22px;
+  position: absolute;
+  right: -8px;
+ }
+}

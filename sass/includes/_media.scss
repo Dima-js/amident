@@ -86,7 +86,7 @@
                                 font-size: 24px;
                                 font-weight: 300;
                                 line-height: 30px;
-                                @include transition(all .5s ease);	
+                                @include transition(all .5s ease);
                                 &:hover{
                                     border: 4px solid #50bdf3;
                                 }
@@ -107,7 +107,7 @@
             }
         }
     }
-    
+
     //    footer
     .footer-top{
         li{        
@@ -116,21 +116,38 @@
             }   
         }
     }
+    // header
+    nav .wrap_nav ul li a {
+        font-size: 12px;
+    }
+    nav .wrap_nav {
+        position: relative;
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+    nav .wrap_nav ul li:not(:last-child) a {
+        padding: 11px 10px 11px 10px;
+    }
+    nav .wrap_nav ul li:last-child a {
+        padding: 11px 0 11px 10px;
+    }
+    nav .wrap_nav .to-home {
+        top: 11px;
+    }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-	header{ 
+
 		//	Humburger
 		.navigation{
-			>div{						
 				nav{
                     div{
                         .toggle-nav{
                             display: block;
-                            width: 54px;
-                            height: 30px;
-                            position: relative;
+                            width: 30px;
+                            height: 27px;
+                            //position: relative;
                             -webkit-transform: rotate(0deg);
                             -moz-transform: rotate(0deg);
                             -o-transform: rotate(0deg);
@@ -140,11 +157,14 @@
                             -o-transition: .5s ease-in-out;
                             transition: .5s ease-in-out;
                             cursor: pointer;
+                            position: absolute;
+                            top: -42px;
+                            left: -13px;
                             span{
                                 display: block;
                                 position: absolute;
-                                height: 2px;
-                                width: 100%;
+                                height: 5px;
+                                width: 30px;
                                 background: #000;
                                 opacity: 1;
                                 left: 0;
@@ -162,10 +182,10 @@
                             }
                             span:nth-of-type(2),
                             span:nth-of-type(3) {
-                                top: 14px;
+                                top: 11px;
                             }
                             span:nth-of-type(4) {
-                                top: 28px;
+                                top: 22px;
                             }			
                         }
                         .toggle-nav.js-active{
@@ -207,43 +227,42 @@
                     }
                 }
 			}
-		}		
-	}
+
     main{
-        .reviews-page{            
+        .reviews-page{
             .wrapper{
                 flex-direction: column;
-            }            
-            .reviews-categories{                
+            }
+            .reviews-categories{
                 width: 100%;
-                padding-top: 15px;                
-                padding-bottom: 10px; 
+                padding-top: 15px;
+                padding-bottom: 10px;
                 margin-bottom: 20px;
                 &__title{
-                    padding-bottom: 10px;                    
+                    padding-bottom: 10px;
                 }
                 &-list{
-                    flex-direction: row;                    
-                    margin-top: 20px;                    
-                    flex-wrap: wrap;                    
-                    li{                        
-                        margin: 0 5px 10px 5px;                        
+                    flex-direction: row;
+                    margin-top: 20px;
+                    flex-wrap: wrap;
+                    li{
+                        margin: 0 5px 10px 5px;
                         a{
-                            font-size: 16px;                            
+                            font-size: 16px;
                             line-height: 16px;
                         }
                     }
                 }
-            }            
-            .reviews-page-content{                
-                width: 100%;                
+            }
+            .reviews-page-content{
+                width: 100%;
                 margin-left: 0;
             }
         }
-    }   
+    }
     //popup review
     .give-review-popup-content{
-        position: relative;        
+        position: relative;
         width: 90%;
         padding: 26px 15px 20px 15px;
     }
@@ -255,6 +274,50 @@
             line-height: 50px;
         }
     }
+nav .wrap_nav {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.wrap_header .slogan {
+    visibility: hidden;
+}
+nav:before {
+    content: '';
+    height: 0px;
+    background: none;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+}
+nav .wrap_nav .to-home {
+    display: none;
+}
+.wrap_header .wrap_min-top-menu a {
+    display: none;
+}
+.logo img{
+    width: 133px;
+    height: 50px;
+}
+.header-btn-contacts{
+    display: block;
+}
+.wrap_header .wrap_min-top-menu {
+    padding-top: 20px;
+    padding-bottom: 13px;
+}
+.wrap_header .wrap_min-top-menu .header-btn-contacts {
+    display: block;
+}
+.prev{
+    display: block;
+}
+// main
+main{
+    margin-top: 4px;
+}
 //    footer
     footer{
         &:before{
@@ -311,8 +374,8 @@
             }
         }
     }
-}
 
+}
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
     //    base
@@ -321,13 +384,13 @@
         padding-right: 10px;
     }
     main{
-        .reviews-page{  
+        .reviews-page{
             padding-top: 13px;
             padding-bottom: 80px;
-            .reviews-categories{                
+            .reviews-categories{
                 display: none;
-            }            
-            .reviews-page-content{  
+            }
+            .reviews-page-content{
                 .reviews-page__title{
                     font-size: 30px;
                     line-height: 30px;
@@ -341,14 +404,14 @@
                         height: 110px;
                         overflow: hidden;
                         @include transition(all .5s ease);
-                    }                    
+                    }
                     .reviews-page-info__mobile-expand{
                         display: -webkit-flex;
                         display: -moz-flex;
                         display: -ms-flex;
                         display: -o-flex;
                         display: flex;
-                        margin-top: 6px;    
+                        margin-top: 6px;
                         @include opacity(1);
                         visibility: visible;
                         @include transition(all .5s ease);
@@ -365,88 +428,88 @@
                 }
                 .leave-review{
                     width: 168px;
-                    height: 40px;                    
+                    height: 40px;
                     margin: 26px auto 0 auto;
                     font-size: 16px;
-                }                
+                }
                 .patients-reviews{
                     margin-top: 19px;
                     .patients-reviews__title{
                         font-size: 25px;
                         line-height: 28px;
-                    }                    
-                    .patients-reviews-list{                        
+                    }
+                    .patients-reviews-list{
                         margin-top: 0;
-                        &__item{                            
-                            margin-bottom: 22px;                            
-                            .patients-reviews-photo{                                
+                        &__item{
+                            margin-bottom: 22px;
+                            .patients-reviews-photo{
                                 display: none;
-                            }                            
-                            .patients-reviews-text{                                
-                                margin-top: 22px;                                
+                            }
+                            .patients-reviews-text{
+                                margin-top: 22px;
                                 width: 100%;
-                                margin-left: 0px;                                
+                                margin-left: 0px;
                                 .patients-reviews-question{
-                                    height: auto;                                    
+                                    height: auto;
                                     padding: 14px 19px 13px 19px;
                                     text-align: left;
-                                    .patients-reviews-question__author{                                        
-                                        color: black;
-                                        font-size: 14px;
-                                        line-height: 18px;  
-                                        padding-right: 0;
-                                    }                                    
-                                    .patients-reviews-question__text{                                        
+                                    .patients-reviews-question__author{
                                         color: black;
                                         font-size: 14px;
                                         line-height: 18px;
-                                        font-weight: 300; 
-                                        margin-top: 10px;                                        
+                                        padding-right: 0;
+                                    }
+                                    .patients-reviews-question__text{
+                                        color: black;
+                                        font-size: 14px;
+                                        line-height: 18px;
+                                        font-weight: 300;
+                                        margin-top: 10px;
                                         height: 75px;
                                     }
                                     .patients-reviews-question__date{
-                                        position: relative;                                        
-                                        display: inline-block;                                        
-                                        right: auto;                                        
+                                        position: relative;
+                                        display: inline-block;
+                                        right: auto;
                                         top: 0;
                                         color: #777;
                                         font-size: 14px;
                                         line-height: 18px;
-                                        font-weight: 300;                                        
-                                    }                          
+                                        font-weight: 300;
+                                    }
                                 }
                                 .patients-reviews-answer{
-                                    height: auto;                                    
+                                    height: auto;
                                     padding: 14px 19px 13px 19px;
                                     text-align: left;
-                                    .patients-reviews-answer__author{                                        
-                                        color: black;
-                                        font-size: 14px;
-                                        line-height: 18px;  
-                                        padding-right: 0;
-                                    }                                    
-                                    .patients-reviews-answer__text{                                        
+                                    .patients-reviews-answer__author{
                                         color: black;
                                         font-size: 14px;
                                         line-height: 18px;
-                                        font-weight: 300; 
-                                        margin-top: 10px;                                        
+                                        padding-right: 0;
+                                    }
+                                    .patients-reviews-answer__text{
+                                        color: black;
+                                        font-size: 14px;
+                                        line-height: 18px;
+                                        font-weight: 300;
+                                        margin-top: 10px;
                                         height: 75px;
                                     }
                                     .patients-reviews-answer__date{
-                                        position: relative;                                        
-                                        display: inline-block;                                        
-                                        right: auto;                                        
+                                        position: relative;
+                                        display: inline-block;
+                                        right: auto;
                                         top: 0;
                                         color: #777;
                                         font-size: 14px;
                                         line-height: 18px;
-                                        font-weight: 300;                                        
-                                    }                          
-                                }                                
+                                        font-weight: 300;
+                                    }
+                                }
                                 &:before{
                                     display: none;
-                                }                                
+                                }
                             }
                         }
                     }
@@ -469,7 +532,7 @@
                 display: block;
             }
         }
-    } 
+    }
 	//    footer
     footer{
         overflow: hidden;
@@ -541,54 +604,54 @@
             }
         }
     }
-    
+
     //popup
     .give-review-popup-content{
         >p{
-            font-size: 16px;            
+            font-size: 16px;
             line-height: 20px;
-        }        
+        }
         .give-review-popup__form-field{
-            flex-direction: column;            
-            margin-bottom: 15px;            
-            label{                
+            flex-direction: column;
+            margin-bottom: 15px;
+            label{
                 font-size: 14px;
                 line-height: 16px;
                 margin-bottom: 10px;
             }
-            input{                
+            input{
                 width: 100%;
                 font-size: 14px;
                 line-height: 16px;
             }
-            textarea{                
-                width: 100%;                
+            textarea{
+                width: 100%;
                 max-width: 100%;
                 font-size: 14px;
                 line-height: 16px;
             }
         }
-        .give-review-popup__captcha-field{            
-            flex-direction: column;            
-            align-items: center;            
-            label{                
-                font-size: 14px;                
-                line-height: 16px;                
-                margin-bottom: 10px;                
-            }
-            input{                
-                width: 100px;                
+        .give-review-popup__captcha-field{
+            flex-direction: column;
+            align-items: center;
+            label{
                 font-size: 14px;
-                line-height: 16px;  
+                line-height: 16px;
+                margin-bottom: 10px;
+            }
+            input{
+                width: 100px;
+                font-size: 14px;
+                line-height: 16px;
                 margin-bottom: 10px;
             }
             .review-captcha{
                 margin-left: 0px;
-            }            
+            }
         }
         .give-review-popup__send{
             font-size: 14px;
-            line-height: 16px;        
+            line-height: 16px;
         }
     }
     //thnx popup
@@ -606,7 +669,7 @@
             line-height: 23px;
         }
     }
-    
+
     //to top button
     #to-top{
         font-size: 0;
@@ -713,7 +776,7 @@
             }             
         }
     }
-    
+
     //to top button
     #to-top{
         font-size: 0;
@@ -724,7 +787,7 @@
 //for footer tooltip
 @media only screen and (max-width : 300px) {
     main{
-        .reviews-page{  
+        .reviews-page{
             padding-bottom: 120px;
         }
     }
