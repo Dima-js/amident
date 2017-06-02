@@ -214,3 +214,25 @@ nav{
  }
 }
 /*end header*/
+
+/* for slider */
+.wrap_slider-serteficats{
+ margin-top: 20px;
+ margin-bottom: 20px;
+ .slick-prev:before {
+  content: '';
+  background: url("../img/arrow-left-slider- certificate.png") no-repeat;
+  height: 32px;
+  width: 22px;
+  position: absolute;
+  left: -8px;
+ }
+ .slick-next:before {
+  content: '';
+  background: url("../img/arrow-right-slider-%20certificate.png") no-repeat;
+  height: 32px;
+  width: 22px;
+  position: absolute;
+  right: -8px;
+ }
+}
