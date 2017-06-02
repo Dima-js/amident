@@ -2,7 +2,15 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-    
+    .reviews-page{
+        .reviews-categories{
+            width: 200px;
+        }
+        .reviews-page-content{
+            width: 79.3%;
+            margin-left: 15px;
+        }
+    }
 //    footer
     .footer-top{
         li{        
@@ -15,6 +23,90 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+    main{
+        .reviews-page{
+            .reviews-page-content{
+                .patients-reviews{
+                    .patients-reviews-list{
+                        margin-top: 50px;
+                        &__item{
+                            margin-bottom: 40px;
+                            .patients-reviews-photo{
+                                width: 80px;
+                                height: 80px;
+                            }
+                            .patients-reviews-text{
+                                .patients-reviews-question{
+                                    padding: 13px 20px 36px 20px;
+                                    .patients-reviews-question__author{
+                                        font-size: 16px;
+                                        padding-right: 100px;
+                                    }
+                                    .patients-reviews-question__text{
+                                        font-size: 14px;
+                                    }
+                                    .patients-reviews-question__date{
+                                        font-size: 12px;
+                                    }
+                                }
+                                .patients-reviews-answer{
+                                    padding: 13px 20px 13px 20px;
+                                    .patients-reviews-answer__author{
+                                        font-size: 16px;
+                                        padding-right: 100px;
+                                    }
+                                    .patients-reviews-answer__text{
+                                        font-size: 14px;
+                                    }
+                                    .patients-reviews-answer__date{
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .patients-reviews-pagination{
+                        display: -webkit-flex;
+                        display: -moz-flex;
+                        display: -ms-flex;
+                        display: -o-flex;
+                        display: flex;
+                        align-items: center;
+                        margin-top: 52px;
+                        li{
+                            margin-right: 10px;
+                            a{
+                                @include df;
+                                width: 40px;
+                                height: 40px;
+                                background-color: white;
+                                border: 1px solid #50bdf3;
+                                color: black;
+                                font-family: "Open Sans";
+                                font-size: 24px;
+                                font-weight: 300;
+                                line-height: 30px;
+                                @include transition(all .5s ease);	
+                                &:hover{
+                                    border: 4px solid #50bdf3;
+                                }
+                            }
+                        }
+                        .active{
+                            a{
+                                width: 42px;
+                                height: 42px;
+                                background-color: #55d4cb;
+                                border: 1px solid #50bdf3;
+                                box-shadow: inset 0 -60px 0 rgba(80, 189, 243, 0.8);
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     //    footer
     .footer-top{
@@ -117,7 +209,44 @@
 			}
 		}		
 	}
-    
+    main{
+        .reviews-page{            
+            .wrapper{
+                flex-direction: column;
+            }            
+            .reviews-categories{                
+                width: 100%;
+                padding-top: 15px;                
+                padding-bottom: 10px; 
+                margin-bottom: 20px;
+                &__title{
+                    padding-bottom: 10px;                    
+                }
+                &-list{
+                    flex-direction: row;                    
+                    margin-top: 20px;                    
+                    flex-wrap: wrap;                    
+                    li{                        
+                        margin: 0 5px 10px 5px;                        
+                        a{
+                            font-size: 16px;                            
+                            line-height: 16px;
+                        }
+                    }
+                }
+            }            
+            .reviews-page-content{                
+                width: 100%;                
+                margin-left: 0;
+            }
+        }
+    }   
+    //popup review
+    .give-review-popup-content{
+        position: relative;        
+        width: 90%;
+        padding: 26px 15px 20px 15px;
+    }
 //    footer
     footer{
         &:before{
@@ -178,6 +307,161 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+    //    base
+    .wrapper{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    main{
+        .reviews-page{  
+            padding-top: 13px;
+            padding-bottom: 80px;
+            .reviews-categories{                
+                display: none;
+            }            
+            .reviews-page-content{  
+                .reviews-page__title{
+                    font-size: 30px;
+                    line-height: 30px;
+                    margin-top: 37px;
+                }
+                .reviews-page-info{
+                    margin-top: 23px;
+                    p{
+                        font-size: 14px;
+                        line-height: 18px;
+                        height: 110px;
+                        overflow: hidden;
+                        @include transition(all .5s ease);
+                    }                    
+                    .reviews-page-info__mobile-expand{
+                        display: -webkit-flex;
+                        display: -moz-flex;
+                        display: -ms-flex;
+                        display: -o-flex;
+                        display: flex;
+                        margin-top: 6px;    
+                        @include opacity(1);
+                        visibility: visible;
+                        @include transition(all .5s ease);
+                    }
+                    &.js-active{
+                        p{
+                            height: auto;
+                        }
+                        .reviews-page-info__mobile-expand{
+                            @include opacity(0);
+                            visibility: hidden;
+                        }
+                    }
+                }
+                .leave-review{
+                    width: 168px;
+                    height: 40px;                    
+                    margin: 26px auto 0 auto;
+                    font-size: 16px;
+                }                
+                .patients-reviews{
+                    margin-top: 19px;
+                    .patients-reviews__title{
+                        font-size: 25px;
+                        line-height: 28px;
+                    }                    
+                    .patients-reviews-list{                        
+                        margin-top: 0;
+                        &__item{                            
+                            margin-bottom: 22px;                            
+                            .patients-reviews-photo{                                
+                                display: none;
+                            }                            
+                            .patients-reviews-text{                                
+                                margin-top: 22px;                                
+                                width: 100%;
+                                margin-left: 0px;                                
+                                .patients-reviews-question{
+                                    height: auto;                                    
+                                    padding: 14px 19px 13px 19px;
+                                    text-align: left;
+                                    .patients-reviews-question__author{                                        
+                                        color: black;
+                                        font-size: 14px;
+                                        line-height: 18px;  
+                                        padding-right: 0;
+                                    }                                    
+                                    .patients-reviews-question__text{                                        
+                                        color: black;
+                                        font-size: 14px;
+                                        line-height: 18px;
+                                        font-weight: 300; 
+                                        margin-top: 10px;                                        
+                                        height: 75px;
+                                    }
+                                    .patients-reviews-question__date{
+                                        position: relative;                                        
+                                        display: inline-block;                                        
+                                        right: auto;                                        
+                                        top: 0;
+                                        color: #777;
+                                        font-size: 14px;
+                                        line-height: 18px;
+                                        font-weight: 300;                                        
+                                    }                          
+                                }
+                                .patients-reviews-answer{
+                                    height: auto;                                    
+                                    padding: 14px 19px 13px 19px;
+                                    text-align: left;
+                                    .patients-reviews-answer__author{                                        
+                                        color: black;
+                                        font-size: 14px;
+                                        line-height: 18px;  
+                                        padding-right: 0;
+                                    }                                    
+                                    .patients-reviews-answer__text{                                        
+                                        color: black;
+                                        font-size: 14px;
+                                        line-height: 18px;
+                                        font-weight: 300; 
+                                        margin-top: 10px;                                        
+                                        height: 75px;
+                                    }
+                                    .patients-reviews-answer__date{
+                                        position: relative;                                        
+                                        display: inline-block;                                        
+                                        right: auto;                                        
+                                        top: 0;
+                                        color: #777;
+                                        font-size: 14px;
+                                        line-height: 18px;
+                                        font-weight: 300;                                        
+                                    }                          
+                                }                                
+                                &:before{
+                                    display: none;
+                                }                                
+                            }
+                        }
+                    }
+                    .patients-reviews-pagination{
+                        justify-content: center;
+                    }
+                }
+            }
+            .leave-review-floating{
+                &.is-visible{
+                    display: none;
+                }
+            }
+        }
+        .breadcrumbs{
+            ul{
+                display: none;
+            }
+            .breadcrumbs__mobile-back{
+                display: block;
+            }
+        }
+    } 
 	//    footer
     footer{
         overflow: hidden;
@@ -249,21 +533,73 @@
             }
         }
     }
+    
+    //popup
+    .give-review-popup-content{
+        >p{
+            font-size: 16px;            
+            line-height: 20px;
+        }        
+        .give-review-popup__form-field{
+            flex-direction: column;            
+            margin-bottom: 15px;            
+            label{                
+                font-size: 14px;
+                line-height: 16px;
+                margin-bottom: 10px;
+            }
+            input{                
+                width: 100%;
+                font-size: 14px;
+                line-height: 16px;
+            }
+            textarea{                
+                width: 100%;                
+                max-width: 100%;
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+        .give-review-popup__captcha-field{            
+            flex-direction: column;            
+            align-items: center;            
+            label{                
+                font-size: 14px;                
+                line-height: 16px;                
+                margin-bottom: 10px;                
+            }
+            input{                
+                width: 100px;                
+                font-size: 14px;
+                line-height: 16px;  
+                margin-bottom: 10px;
+            }
+            .review-captcha{
+                margin-left: 0px;
+            }            
+        }
+        .give-review-popup__send{
+            font-size: 14px;
+            line-height: 16px;        
+        }
+    }
+    
+    //to top button
+    #to-top{
+        font-size: 0;
+        bottom: 29px;
+    }
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
-//    base
-    .wrapper{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
 //    footer
     footer{
         position: fixed;
         bottom: 0;
         width: 100%;
         overflow: visible;
+        z-index: 5;
     }
     .footer-top,
     .footer-bottom{
@@ -354,10 +690,21 @@
             }             
         }
     }
+    
+    //to top button
+    #to-top{
+        font-size: 0;
+        bottom: 135px;
+    }
 }
 
 //for footer tooltip
-@media only screen and (max-width : 284px) {
+@media only screen and (max-width : 300px) {
+    main{
+        .reviews-page{  
+            padding-bottom: 120px;
+        }
+    }
     .footer-mobile{
         ul{
             .footer-mobile-call{     
@@ -367,5 +714,10 @@
                 }
             }             
         }
+    }
+    //to top button
+    #to-top{
+        font-size: 0;
+        bottom: 100px;
     }
 }

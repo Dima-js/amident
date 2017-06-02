@@ -8,7 +8,13 @@ $(document).ready(function() {
 			type:'inline',
 			midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 			// other options
-		});			
+		});	
+        $('.leave-review-floating').magnificPopup({
+			type:'inline',
+			midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+			// other options
+		});
+    
 
 //    //    Слайдер
 //    //    Документація: http://kenwheeler.github.io/slick/
