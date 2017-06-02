@@ -82,7 +82,7 @@
                                 background-color: white;
                                 border: 1px solid #50bdf3;
                                 color: black;
-                                font-family: "Open Sans";
+                                font-family: 'OpenSans';
                                 font-size: 24px;
                                 font-weight: 300;
                                 line-height: 30px;
@@ -246,6 +246,14 @@
         position: relative;        
         width: 90%;
         padding: 26px 15px 20px 15px;
+    }
+    //thnx popup
+    .tnhx-popup-content{
+        width: 90%;
+        p{
+            font-size: 40px;
+            line-height: 50px;
+        }
     }
 //    footer
     footer{
@@ -583,6 +591,21 @@
             line-height: 16px;        
         }
     }
+    //thnx popup
+    .tnhx-popup-content{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        p{
+            font-size: 24px;
+            line-height: 23px;
+        }
+    }
     
     //to top button
     #to-top{
@@ -630,7 +653,7 @@
                 a{
                     @include df;
                     color: #e6e6e8;
-                    font-family: "Open Sans";
+                    font-family: 'OpenSans';
                     font-size: 12px;
                     font-weight: 400;
                     line-height: 22px;
@@ -650,7 +673,7 @@
                 a{
                     @include df;
                     color: white;
-                    font-family: "Open Sans";
+                    font-family: 'OpenSans';
                     font-size: 12px;
                     font-weight: 400;
                     line-height: 22px;
@@ -670,7 +693,7 @@
                 >a{
                     @include df;
                     color: #e6e6e8;
-                    font-family: "Open Sans";
+                    font-family: 'OpenSans';
                     font-size: 12px;
                     font-weight: 400;
                     line-height: 22px;
