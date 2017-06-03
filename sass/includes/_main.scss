@@ -1,12 +1,297 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+$nav_color:#fff;
+$nav_allotment:#50BDF3;
+
+body{
+	font-family: 'OpenSans';
+}
+
 header{
+	&.m_header{
+		box-shadow: none;
+		background-color: transparent;
+	 }
+	> .navigation {
+		display: none;
+	}
     nav{
-        
+      
+    }
+    .m_header_wrap {
+    	max-width: 1368px;
+	    margin-left: auto;
+	    margin-right: auto;
+    	.layer {
+    		max-width: 100%;
+	    	background-position: right;
+	    	background-repeat: none;
+	    	background-size:cover;
+	    	background-image: url('../img/bg-main-header.png');
+	    	min-height: 590px;
+	    	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+	    	.navigation_wrap{
+	    		@include clearfix;
+	    		.navigation {
+		    		.left_menu {
+		    			float: left;
+		    			width: 50%;
+		    			padding-left: 4%;
+		    			background-color: #00070C;
+		    			li {
+		    				display: table-cell;
+		    				vertical-align: middle;
+		    				padding-right: 40px;
+		    				a {
+		    					color: $nav_color;
+		    				}
+		   			}
+		    			@include clearfix;
+		    		}
+		    		.contacts {
+		    			float: right;
+		    			background-color: #00070C;
+		    			padding: 20px 4% 5px 20px;
+		    			li {
+		    				display: table-cell;
+		    				vertical-align: middle;
+		    				padding-bottom: 20px;
+		    				padding-left: 40px;	    				
+		    				a {
+		    					color: $nav_color;
+		    				}
+		   			}
+		    			li:first-child{
+		    				padding-left:0;
+		    			}
+		    			@include clearfix;
+
+		    		}
+		    		
+		    	}
+		    	.slider {
+	    			float: left;
+	    			width: 50%;
+	    			padding-left: 4%;
+	    			background-color: #00070C;
+	    			padding-top: 80px;
+	    			h1 {
+	    				color: $nav_color;
+	    				font-weight: 300;
+	    				.blue {
+	    				color: $nav_allotment;
+		    			}
+	    			}
+	    			p {
+	    				padding: 30px 0;
+	    				color: $nav_color;
+	    				.blue {
+	    				color: $nav_allotment;
+		    			}
+	    			}
+	    			button {
+	    				margin-top: 5px;
+	    				margin-bottom: 40px;
+	    				background-color: transparent;
+	    				color: $nav_color;
+	    				padding:25px;
+	    				cursor: pointer;
+	    				&::hover{
+	    					background-color: $nav_allotment;
+	    				}
+	    			}
+	    		}
+	    	}
+    	}
+    	.header_bottom_nav{
+    		background-color: #EDEDED;
+    		padding-right: 4%;
+    		ul li {
+    			float: right;
+    			padding:40px 0 40px 85px;
+    			font-size: 22px;
+
+    		}
+    		@include clearfix;
+    	}
     }
 }
+
+$main_color: #000;
+
 main{
-    
+	.main {
+		background-color: #EDEDED;
+		max-width: 1368px;
+	    margin-left: auto;
+	    margin-right: auto; 
+		.m_article_left{
+			float: left;
+			width: 50%;
+			padding: 45px 0 45px 4%;
+				h2 {
+					padding: 10px 0;
+					font-size: 40px;
+					font-weight: 300;
+					color: $main_color;
+				}
+				p {
+					padding: 10px 0;
+					font-size: 18px;
+					color: $main_color;
+				}
+				img {
+					width: 100%;
+				}
+				.reed_more{
+					font-weight:bold;
+					color: $main_color;
+					cursor: pointer;
+				}
+			}
+			.m_article_right{
+				@extend .m_article_left;
+				padding-right: 4%;
+				.gutter {
+					padding-left:8%;
+				}
+			}
+		
+		.clearfix {
+			@include clearfix;	
+		}
+		.slogan {
+			background-image: url('../img/smile-with-us.png');
+			min-height: 340px;
+			position: relative;
+			h1{
+				@include centerMe;
+				font-size: 70px;
+				color: $nav_allotment;
+				font-weight: 300;
+				text-shadow: 2px 2px 1px #BC92A7, -2px -2px 1px #BC92A7;
+			}
+		}
+		.m_specialist_wrap{
+			background-color: #EDEDED;
+			padding: 50px 4.5%;
+			h2{
+				padding: 20px 0;
+				font-size: 40px;
+				font-weight: 300;
+				color: $main_color;
+
+			}
+			.m_specialist_hold{
+				margin: 0 -35px;
+				border-bottom: 2px solid #959595;
+				.circle{
+					width: 34px;
+					position: relative;
+					top: 21px;
+					left: 20%;
+					&::after{
+					content: '';
+					position:absolute;
+					top: 6px;
+  					left:50%;
+  					transform:translateX(-50%);
+					border: 8px solid $main_color;
+					border-radius: 50%;
+					width: 0;
+					padding: 0;
+					font-size: 0;
+				}
+				}
+				.m_single_specialist{
+					float: left;
+					width: 33.333%;
+					padding: 0 35px;
+					.thumb {
+						float: left;
+						width: 35%;
+						padding-right: 15px;
+						padding-bottom: 15px;
+					}
+					.specialist_info{
+						float: left;
+						width: 65%; 
+						h3 {
+							font-weight: 300;
+							font-size: 22px;
+							color: $main_color;
+						}
+						p {
+							font-size: 18px;
+							color: $main_color;
+						}
+					}
+				}
+
+			}
+		}
+		.m_questions_wrap {
+			background-color: #959595;
+			.m_questions_header{
+				padding: 25px 4.5% 15px;
+				font-size: 40px;
+				font-weight: 300;
+				color: $main_color;
+			}
+			.m_questions_col {
+				@extend .m_article_left;
+				padding-top: 0px;
+				padding-bottom: 0px;
+				ol{
+					border-right: 1px solid #fff;
+				}
+				li {
+					font-size: 20px;
+					color: $main_color;
+					padding: 15px 0;
+					a {
+						color: $main_color;
+					}
+				}
+			}
+			.clearfix {
+				@include clearfix;	
+			}
+			.all_question_holder{
+				.all_question{
+					position: relative;
+					left:50%;
+	 				transform:translateX(-50%);
+					font-size: 22px;
+					padding: 15px;
+					background-color: transparent;
+					font-weight: bold;
+					border: 2px solid $main_color;
+					cursor: pointer;
+				}
+			}
+		}
+		.go_top_holder{
+			background-color: #959595;
+			padding-bottom: 35px;
+			.go_top{
+				float: right;
+				color: $main_color;
+				cursor: pointer;
+			}
+		}
+	}
+   	 
 }
 footer{
+
+	& { display: none; }
+
 	>div{
 		
 	}

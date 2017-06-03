@@ -3,16 +3,16 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "sass/includes/_normalize";
-@import "sass/includes/_fonts";
-@import "sass/includes/_family";
-@import "sass/includes/_mixins";
-@import "sass/includes/_base";
-@import "sass/includes/_typography";
-@import "sass/includes/_sprite";
-@import "sass/includes/_main";
-@import "sass/_header";
-@import "sass/_reviews";
-@import "sass/_implantology";
-@import "sass/_footer";
-@import "sass/includes/_media";
+@import "includes/_normalize";
+@import "includes/_fonts";
+@import "includes/_family";
+@import "includes/_mixins";
+@import "includes/_base";
+@import "includes/_typography";
+@import "includes/_sprite";
+@import "includes/_main";
+@import "_header";
+@import "_reviews";
+@import "_implantology";
+@import "_footer";
+@import "includes/_media"; 
