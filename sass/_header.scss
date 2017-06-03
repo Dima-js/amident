@@ -140,7 +140,7 @@ nav{
    top: 13px;
    left: 0;
   }
-  ul{
+  >ul{
    list-style: none;
    margin-top: 0;
    margin-bottom: 0;
@@ -194,7 +194,7 @@ nav{
  font-weight: 700;
  display: none;
 }
-.active-m a:before{
+.wrap_nav ul li.active a:before{
  content: '';
  height: 4px;
  background:  #50bdf3;
@@ -205,14 +205,10 @@ nav{
  z-index: 1;
 }
 
-@media (max-width: 1295px) {
- .wrap_header .wrap_min-top-menu a .header-tooltip {
-  right: -61px;
- }
- .wrap_header .wrap_min-top-menu a .header-tooltip .befor-element:before {
-  right: 56px;
- }
+ul li p li a{
+ text-transform: none;
 }
+
 /*end header*/
 
 /* for slider */
@@ -234,5 +230,51 @@ nav{
   width: 22px;
   position: absolute;
   right: -8px;
+ }
+}
+
+/* media */
+@media (max-width: 1295px) {
+ .wrap_header .wrap_min-top-menu a .header-tooltip {
+  right: -61px;
+ }
+ .wrap_header .wrap_min-top-menu a .header-tooltip .befor-element:before {
+  right: 56px;
+ }
+}
+
+@media (max-width: 1233px) {
+ nav .wrap_nav ul li:not(:last-child) a {
+  padding: 15px 25px 11px 25px;
+ }
+ nav .wrap_nav ul li:last-child a {
+  padding: 15px 0 11px 25px;
+ }
+}
+@media (max-width: 1144px) {
+ nav .wrap_nav ul li:not(:last-child) a {
+  padding: 15px 20px 11px 20px;
+ }
+ nav .wrap_nav ul li:last-child a {
+  padding: 15px 0 11px 20px;
+ }
+ nav .wrap_nav ul li a {
+  font-size: 15px;
+ }
+}
+@media (max-width: 1030px) {
+ nav .wrap_nav ul li a {
+  font-size: 14px;
+ }
+ nav .wrap_nav ul li:not(:last-child) a {
+  padding: 15px 17px 11px 17px;
+ }
+ nav .wrap_nav ul li:last-child a {
+  padding: 15px 0 11px 17px;
+ }
+}
+@media (max-width: 850px) {
+ nav .wrap_nav ul li a {
+  font-size: 12px !important;
  }
 }

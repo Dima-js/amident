@@ -189,28 +189,28 @@
                             }			
                         }
                         .toggle-nav.js-active{
-                            span:nth-of-type(1) {
-                                top: 18px;
-                                width: 0%;
-                                left: 50%;
-                            }
-                            span:nth-of-type(2) {
-                                -webkit-transform: rotate(45deg);
-                                -moz-transform: rotate(45deg);
-                                -o-transform: rotate(45deg);
-                                transform: rotate(45deg);
-                            }
-                            span:nth-of-type(3) {
-                                -webkit-transform: rotate(-45deg);
-                                -moz-transform: rotate(-45deg);
-                                -o-transform: rotate(-45deg);
-                                transform: rotate(-45deg);
-                            }
-                            span:nth-of-type(4) {
-                                top: 18px;
-                                width: 0%;
-                                left: 50%;
-                            }			
+                            //span:nth-of-type(1) {
+                            //    top: 18px;
+                            //    width: 0%;
+                            //    left: 50%;
+                            //}
+                            //span:nth-of-type(2) {
+                            //    -webkit-transform: rotate(45deg);
+                            //    -moz-transform: rotate(45deg);
+                            //    -o-transform: rotate(45deg);
+                            //    transform: rotate(45deg);
+                            //}
+                            //span:nth-of-type(3) {
+                            //    -webkit-transform: rotate(-45deg);
+                            //    -moz-transform: rotate(-45deg);
+                            //    -o-transform: rotate(-45deg);
+                            //    transform: rotate(-45deg);
+                            //}
+                            //span:nth-of-type(4) {
+                            //    top: 18px;
+                            //    width: 0%;
+                            //    left: 50%;
+                            //}
                         }
                         //show
                         ul{
@@ -228,6 +228,23 @@
                 }
 			}
 
+    .wrap_nav ul li.active a:before {
+        content: '';
+        height: 4px;
+        background: #50bdf3;
+        position: absolute;
+        bottom: -15px;
+        width: 50%;
+        left: 25%;
+        z-index: 1;
+    }
+nav .wrap_nav > ul {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    float: left;
+}
     main{
         .reviews-page{
             .wrapper{
@@ -259,6 +276,12 @@
                 margin-left: 0;
             }
         }
+    }
+
+
+
+    nav .wrap_nav ul li {
+        display: block;
     }
     //popup review
     .give-review-popup-content{
