@@ -114,7 +114,17 @@ $(document).ready(function() {
 		$('.content').hide();
 		$('.content[data-id=' + (currentSlide + 1) + ']').show();
 	});
+$('.wrap_nav >ul>li:first-child').click(function(event){
+	event.preventDefault();
+	$('.wrap_nav>ul>li:first-child ul').toggleClass('active');
+	$(this).toggleClass('arrow');
 
+})
+	$('.wrap_nav >ul>li:nth-child(2)').click(function(event){
+		event.preventDefault();
+		$('.wrap_nav>ul>li:nth-child(2) ul').toggleClass('active');
+		$(this).toggleClass('arrow');
+	})
 
 });
 

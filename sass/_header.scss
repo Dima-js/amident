@@ -4,7 +4,14 @@ header{
  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-
+.wrap-for-fixed{
+ position: fixed;
+ z-index: 9;
+ width: 100%;
+}
+main{
+ padding-top: 113px;
+}
 .wrap_header{
 
  .slogan{
@@ -55,9 +62,11 @@ header{
   }
   a{
    display: inline-block;
-   margin-left: 25px;
+   padding-left: 25px;
+   padding-bottom: 15px;
    &:nth-child(3) {
     position: relative;
+
     &:hover{
      .header-tooltip{
       opacity: 1;
@@ -102,10 +111,50 @@ header{
   }
 
  }
-//.header-tooltip .active {
-// opacity: 1;
-// visibility: visible;
-//}
+
+.wrap_min-top-menu{
+a:nth-child(2){
+ position: relative;
+ &:active, &:focus, &:visited, &:hover{
+  .wrap-form{
+   display: block;
+  }
+ }
+ .wrap-form{
+  position: absolute;
+  top: -8px;
+  left: -274px;
+  display: none;
+ form{
+  position: relative;
+  input{
+   position: absolute;
+   top: 0;
+   left: 0;
+   color: #000000;
+   font-family: 'OpenSans';
+   font-size: 14px;
+   font-weight: 300;
+   line-height: 18px;
+   padding: 6px 12px 4px 12px;
+   width: 323px;
+  }
+  button{
+   position: absolute;
+   top: 8px;
+   left: 298px;
+   background: url("../img/icon-search.png") no-repeat;
+   height: 13px;
+   width: 14px;
+   border: none;
+   outline: none;
+   background-color: transparent;
+  }
+
+ }
+ }
+}
+}
 
 .wrapper-nav{
  background-color: #959595;
@@ -209,6 +258,9 @@ ul li p li a{
  text-transform: none;
 }
 
+.slide-m{
+ display: none;
+}
 /*end header*/
 
 /* for slider */
@@ -240,6 +292,14 @@ ul li p li a{
  }
  .wrap_header .wrap_min-top-menu a .header-tooltip .befor-element:before {
   right: 56px;
+ }
+ .wrapper-nav {
+  background-color: #959595;
+  max-width: none;
+  padding-right: inherit;
+  padding-left: inherit;
+  margin-right: auto;
+  margin-left: auto;
  }
 }
 
@@ -275,6 +335,30 @@ ul li p li a{
 }
 @media (max-width: 850px) {
  nav .wrap_nav ul li a {
-  font-size: 12px !important;
+  font-size: 12px ;
+ }
+}
+@media (max-width: 430px) {
+ .wrap_header .slogan {
+  width: 30%;
+ }
+ .wrap_header .wrap_min-top-menu {
+  width: 30%;
+ }
+}
+@media (max-width: 400px) {
+ .wrap_header .slogan {
+  width: 19%;
+ }
+ .wrap_header .logo {
+  width: 45%;
+ }
+ .wrap_header .wrap_min-top-menu {
+  width: 30%;
+ }
+}
+@media (max-width: 543px) {
+ .wrap_nav:after{
+  clear: inherit!important;
  }
 }
