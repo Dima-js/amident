@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="css/style.min.css" />
 </head>
 <body>
+<div class="wrap-for-fixed">
     <header>
         <div class="wrapper">
             <div class="wrap_header">
@@ -48,55 +49,178 @@
                     <img src="img/main-logo.png">
                 </a>
                 <div class="wrap_min-top-menu">
+                    <a href="#" class="header-btn-contacts">Контакты</a>
                     <a href="#">
                         <img src="img/icon-search.png">
+                        <div class="wrap-form">
+                            <form method="post">
+                                <input type="text" name="search" placeholder="поиск по сайту...">
+                                <button type="submit"></button>
+                            </form>
+                        </div>
                     </a>
                     <a href="#">
                         <img src="img/icon-phone.png">
+                        <div class="header-tooltip">
+                            <div class="befor-element">
+                                <p>+7 (812) 926-10-63</p>
+                                <p>+7 (812) 928-10-63</p>
+                                <p>+7 (812) 986-33-34</p>
+                            </div>
+                        </div>
                     </a>
                     <a href="#">
                         <img src="img/icon-email.png">
+
                     </a>
                 </div>
             </div>
         </div>
     </header>
-    <nav>
-        <div class="wrapper-nav">
-        <div class="wrapper">
-            <div class="wrap_nav clearfix">
-                <a href="#" class="to-home"></a>
-                <ul>
-                    <li>
-                        <a href="#">О клинике </a>
-                    </li>
-                    <li>
-                        <a href="#">Услуги</a>
-                    </li>
-                    <li>
-                        <a href="#">Цены</a>
-                    </li>
-                    <li>
-                        <a href="#">Акции</a>
-                    </li>
-                    <li >
-                        <a href="#">Наши работы</a>
-                    </li>
+    <div class="navigation">
+        <nav class="menu">
+            <div class="wrapper-nav">
+                <div class="wrapper">
+                    <div class="wrap_nav clearfix">
+                        <div class="toggle-nav">
+                            <b class="visually-hidden">Open the navigation</b>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="#" class="to-home"></a>
+                        <ul class="js-active ">
+                            <li >
+                                <a href="#">О клинике </a>
+                                <ul class="slide-m ">
+                                    <li>
+                                        <a href="#" title="Имплантология" class="reviews-categories__current">
+                                            Имплантология
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Реставрация зубов">
+                                            Реставрация зубов
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Терапия">
+                                            Терапия
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Ортопедия">
+                                            Ортопедия
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Ортодонтия">
+                                            Ортодонтия
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Эндодонтия">
+                                            Эндодонтия
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Отбеливание зубов">
+                                            Отбеливание зубов
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Хирургия">
+                                            Хирургия
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Пародонтология">
+                                            Пародонтология
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="#">Услуги</a>
 
-                    <li class="active">
-                        <a href="#">Отзывы</a>
-                    </li>
-                    <li>
-                        <a href="#">Вопрос - ответ</a>
-                    </li>
-                    <li>
-                        <a href="#">Контакты</a>
-                    </li>
-                </ul>
+                                <ul class="slide-m clearfix">
+                                    <li>
+                                        <a href="#" title="Имплантология" class="reviews-categories__current">
+                                            Имплантология
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Реставрация зубов">
+                                            Реставрация зубов
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Терапия">
+                                            Терапия
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Ортопедия">
+                                            Ортопедия
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Ортодонтия">
+                                            Ортодонтия
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Эндодонтия">
+                                            Эндодонтия
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Отбеливание зубов">
+                                            Отбеливание зубов
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Хирургия">
+                                            Хирургия
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Пародонтология">
+                                            Пародонтология
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <li>
+                                <a href="#">Цены</a>
+                            </li>
+                            <li>
+                                <a href="#">Акции</a>
+                            </li>
+                            <li >
+                                <a href="#">Наши работы</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="#">Отзывы</a>
+                            </li>
+                            <li>
+                                <a href="#">Вопрос - ответ</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        </div>
-    </nav>
+
+        </nav>
+        <!--<a href="#" class="prev">← Назад</a>-->
+    </div>
+</div>
     <main>
         <div class="reviews-page">
             <div class="wrapper">
