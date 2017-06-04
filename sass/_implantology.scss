@@ -403,3 +403,37 @@
     }
   }
 }
+
+@media (max-width: 1125px) {
+  .wrap_impl-articles {
+    .impl-article{
+      .wrap_data-imp-article{
+        p {
+          width: 48%;
+        }
+        img{
+          width: 50%;
+        }
+      }
+    }
+  }
+  
+  .wrap_impl-articles{
+    .impl-article2{
+      .wrap_data-imp-article{
+        p {
+          width: 48%;
+        }
+        img{
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 939px) {
+  .description_for-btn {
+    margin-left: 0px;
+    display: block;
+  }
+}
