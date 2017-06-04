@@ -1,0 +1,99 @@
+.about {
+  position: relative;
+  background-color: #ededed;
+  padding-top: 44px;
+  @media (max-width: 767px){
+    background-color: #fff;
+  }
+  .reviews-page-content {
+    width: 100%;
+  }
+  .reviews-page__title {
+    font-family: "OpenSans-Light";
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 35px;
+    @media (max-width: 767px){
+      font-size: 30px;
+      margin-bottom: 0px;
+      margin-top: 42px;
+    }
+  }
+}
+.wrap-blocks {
+  background: #959595;
+  padding-top: 20px;
+  padding-bottom: 102px;
+  .wrap-blocks__small {
+    width: 61.5%;
+    float: left;
+    @media (max-width: 767px){
+      width: 100%;
+      float: none;
+    }
+  }
+  .wrap-blocks__big {
+    width: 38.5%;
+    float: left;
+    @media (max-width: 767px){
+      display: none;
+    }
+  }
+  .small-blocks {
+    .wrap-info {
+      width: 250px;
+      height: 250px;
+      background: #ffffff;
+      float: left;
+      padding-top: 39px;
+      padding-left: 32px;
+      padding-right: 32px;
+      .number {
+        font-family: "OpenSans-Light";
+        font-size: 40px;
+        color: #c3b9b9;
+        @media (max-width: 767px){
+          display: none;
+        }
+      }
+      .name {
+        font-family: "OpenSans-Semibold";
+        font-size: 22px;
+        color: #000;
+        padding-bottom: 8px;
+      }
+      .content {
+        font-family: "OpenSans-Regular";
+        font-size: 16px;
+        color: #000;
+        background: #ffffff;
+        text-align: left;
+        width: 150px;
+        @media (max-width: 767px){
+          width: 100%;
+        }
+      }
+      @media (max-width: 767px){
+        width: 100%;
+        float: none;
+        height: auto;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 16px;
+      }
+    }
+    img {
+      width: 250px;
+      height: 250px;
+      float: left;
+      @media (max-width: 767px){
+        width: 100%;
+        height: auto;
+        float: none;
+      }
+    }
+  }
+  @media (max-width: 767px){
+   background: #ffffff;
+  }
+}
