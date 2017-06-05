@@ -578,6 +578,34 @@
         </div>
     </div>
 </footer>
+
+<!--give-review-popup-->
+<div id="give-review-popup" class="give-review-popup-content mfp-hide">
+    <p class="give-review-popup__title">Оставить отзыв</p>
+    <form action="">
+        <div class="give-review-popup__form-field">
+            <label for="give-review-popup__name">Имя:<span>*</span></label>
+            <input type="text" name="your-name" id="give-review-popup__name" />
+        </div>
+        <div class="give-review-popup__form-field">
+            <label for="give-review-popup__message">Отзыв:<span>*</span></label>
+            <textarea name="your-review" id="give-review-popup__message" cols="30" rows="10"></textarea>
+        </div>
+        <div class="give-review-popup__captcha-field">
+            <label for="give-review-popup__captcha">Код подтверждения:<span>*</span></label>
+            <input type="text" name="your-captcha" id="give-review-popup__captcha" />
+            <div class="review-captcha">
+                <img src="/img/protective-characters.png" alt="Captcha">
+            </div>
+        </div>
+        <button type="submit" class="give-review-popup__send">Отправить</button>
+    </form>
+</div>
+<!--thnx popup-->
+<div id="tnhx-popup" class="tnhx-popup-content mfp-hide">
+    <p>Заявка отправлена, спасибо!</p>
+    <a href="/index.html" title="На главную">На главную</a>
+</div>
 <!--[if lt IE 9]>
 <script src="libs/html5shiv/es5-shim.min.js"></script>
 <script src="libs/html5shiv/html5shiv.min.js"></script>

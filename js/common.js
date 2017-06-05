@@ -169,6 +169,13 @@ $(document).ready(function() {
 					slidesToShow: 2,
 					slidesToScroll: 1
 				}
+			},
+			{
+				breakpoint: 340,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
 			}
 		]
 	});
