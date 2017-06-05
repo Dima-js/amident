@@ -436,4 +436,10 @@
     margin-left: 0px;
     display: block;
   }
+
+}
+@media (max-width: 1015px) {
+  .reviews-page .reviews-page-content {
+    width: 73%!important;
+  }
 }
