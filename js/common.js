@@ -115,6 +115,83 @@ $(document).ready(function() {
 		$('.content[data-id=' + (currentSlide + 1) + ']').show();
 	});
 
+//mainPage_menu
+	$(".m_menu-toggle").click(function(){
+		$(".m_nav").slideDown(200);
+	});
+	$(".m_menu-toggle_active, .m_close_menu").click(function(){
+		$(".m_nav").slideUp(200);
+	});
+
+	var m_serv=document.getElementById('m_serv'),
+		m_about=document.getElementById('m_about'),
+		m_serv_content_li_single=document.querySelectorAll("#m_serv_content li")[0],
+		m_about_content_li_single=document.querySelectorAll("#m_about_content li")[0];
+
+	$("#m_serv").click(function(){
+		if(window.innerWidth<321){
+			$("#m_serv_content li").slideToggle(200);
+			if (m_serv_content_li_single.offsetHeight>0){
+				m_serv.classList.remove( "m_give_me_before_down" );
+				m_serv.classList.add( "m_give_me_before" );
+			} else {
+				m_serv.classList.remove( "m_give_me_before" );
+				m_serv.classList.add( "m_give_me_before_down" );
+			}
+			return false;
+		}
+	});
+	$("#m_about").click(function(){
+		if(window.innerWidth<321){
+			$("#m_about_content li").slideToggle(200);
+			if (m_about_content_li_single.offsetHeight>0){
+				m_about.classList.remove( "m_give_me_before_down" );
+				m_about.classList.add( "m_give_me_before" );
+			} else {
+				m_about.classList.remove( "m_give_me_before" );
+				m_about.classList.add( "m_give_me_before_down" );
+			}
+			return false;
+		}
+	});
+
+	if(window.innerWidth<321){
+		$("#m_about").trigger('click');
+		m_about.classList.remove( "m_give_me_before_down" );
+		m_about.classList.add( "m_give_me_before" );
+		$("#m_serv").trigger('click');
+		m_serv.classList.remove( "m_give_me_before_down" );
+		m_serv.classList.add( "m_give_me_before" );
+	}
+
+	window.onresize=function(){
+	if(window.innerWidth>320 && (m_about_content_li_single.offsetHeight==0 || m_serv_content_li_single.offsetHeight==0)){
+		$("#m_serv_content li").slideDown(200);
+		m_serv.classList.remove( "m_give_me_before" );
+		m_serv.classList.remove( "m_give_me_before_down" );
+		$("#m_about_content li").slideDown(200);
+		m_about.classList.remove( "m_give_me_before" );
+		m_about.classList.remove( "m_give_me_before_down" );
+	}
+	if (window.innerWidth<321 && (m_about_content_li_single.offsetHeight>0 || m_serv_content_li_single.offsetHeight>0)){
+		$("#m_serv_content li").slideUp(200);
+		m_serv.classList.add( "m_give_me_before" );
+		$("#m_about_content li").slideUp(200);
+		m_about.classList.add( "m_give_me_before" );	
+	}
+};
+
+//mainPage_read_more
+	$("#m_reed_more").click(function(){
+		$(".m_reed_me, #m_reed_less").slideDown(200);
+		$("#m_reed_more").slideUp(200);
+
+	});
+	$("#m_reed_less").click(function(){
+		$(".m_reed_me, #m_reed_less").slideUp(300);
+		$("#m_reed_more").slideDown(300);
+	});
+
 //mainPage_header-carousel
 
   $("#m_header-carousel").owlCarousel({
