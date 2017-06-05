@@ -11,6 +11,9 @@ $nav_allotment:#50BDF3;
 
 body{
 	font-family: 'OpenSans';
+	a:hover{
+		font-weight: bold;
+	}
 }
 
 header{
@@ -18,9 +21,6 @@ header{
 		box-shadow: none;
 		background-color: transparent;
 	 }
-	> .navigation {
-		display: none;
-	}
     nav{
       
     }
@@ -82,7 +82,7 @@ header{
 		    				display: table-cell;
 		    				vertical-align: middle;
 		    				padding-bottom: 20px;
-		    				padding-left: 40px;	    				
+		    				padding-left: 40px;    				
 		    				a {
 		    					color: $nav_color;
 		    				}
@@ -94,12 +94,32 @@ header{
 		    		}
 		    		
 		    	}
-		    	.slider {
+		    	.m_slider {
 	    			float: left;
 	    			width: 50%;
 	    			padding-left: 4%;
 	    			background-color: #00070C;
 	    			padding-top: 80px;
+	    			&.owl-carousel{
+	    				z-index: 20;
+	    			}
+	    			.owl-dots{
+	    				position: absolute;
+	    				bottom:-80px;
+	    				.owl-dot{
+	    					background-color: #fff;
+	    					width: 9px;
+	    					height: 9px;
+	    					display: inline-block;
+	    					margin-right: 12px;
+	    					vertical-align:middle;
+	    					&.active{
+	    						background-color: #6BCDFC;
+	    						width: 12px;
+	    						height: 12px;
+	    					}
+	    				}
+	    			}
 	    			h2 {
 	    				color: $nav_color;
 	    				font-weight: 300;
@@ -121,8 +141,9 @@ header{
 	    				color: $nav_color;
 	    				padding:25px;
 	    				cursor: pointer;
-	    				&::hover{
+	    				&:hover{
 	    					background-color: $nav_allotment;
+	    					font-weight: bold;
 	    				}
 	    			}
 	    		}
@@ -135,7 +156,7 @@ header{
 		    			min-height: 300px;
 		    			.triangle_layer{
 		    				position: absolute;
-		    				z-index: 200;
+		    				z-index: 10;
 		    				top: -268px;
 		    				left: -72px;
 			    			background-color: #00070C;
@@ -202,6 +223,9 @@ main{
 					font-weight:bold;
 					color: $main_color;
 					cursor: pointer;
+					&:hover{
+						color: $nav_allotment;
+					}
 				}
 			}
 			.m_article_right{
@@ -279,11 +303,13 @@ main{
 		}
 	}
 }
-.m_single_specialist{
+.owl-carousel > .m_single_specialist{//noJS
 	float: left;
 	width: 33.333%;
-	padding: 0 35px;
-	.thumb {
+}
+.m_single_specialist{
+	padding: 0 15px;
+	img.thumb{
 		float: left;
 		width: 35%;
 		padding-right: 15px;
@@ -291,13 +317,25 @@ main{
 	}
 	.specialist_info{
 		float: left;
-		width: 65%; 
+		width: 65%;
+		padding-bottom: 10px;
 		h3 {
 			font-weight: 300;
 			font-size: 22px;
-			color: $main_color;
+			padding-bottom: 10px;
+			border-bottom: 1px solid $main_color;
+			a{
+				color: $main_color;
+			}
 		}
-		p {
+		.just_blue_rectangle{
+			margin-top: -1px;
+			width: 30px;
+			height: 3px;
+			background-color: #6BCDFC;
+		}
+		p {	
+			padding-top: 10px;
 			font-size: 18px;
 			color: $main_color;
 		}
@@ -341,6 +379,10 @@ main{
 			font-weight: bold;
 			border: 2px solid $main_color;
 			cursor: pointer;
+			&:hover{
+				background-color: $nav_allotment;
+				font-weight: bold;
+			}
 		}
 	}
 }
@@ -351,14 +393,15 @@ main{
 		float: right;
 		color: $main_color;
 		cursor: pointer;
+		&:hover{
+			font-weight: bold;
+		}
 	}
 }
 /**********************************************************************************
 * footer
 */
 footer{
-
-	& { display: none; }
 
 	>div{
 		

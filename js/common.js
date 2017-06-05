@@ -115,6 +115,41 @@ $(document).ready(function() {
 		$('.content[data-id=' + (currentSlide + 1) + ']').show();
 	});
 
+//mainPage_header-carousel
+
+  $("#m_header-carousel").owlCarousel({
+  	items: 1,
+  	loop:true,
+  	dotsEach: true,
+  	autoplay: true,
+  	autoplayTimeout: 3000,
+  	autoplaySpeed: 1000,
+  	autoplayHoverPause:true
+  });
+
+//mainPage_specialist-carousel
+
+  $("#m_specialist-carousel").owlCarousel({
+  	autoplay: true,
+  	autoplayTimeout: 3000,
+  	autoplaySpeed: 1000,
+  	autoplayHoverPause:true,
+  	responsive: {
+  		993:{
+  			items: 3
+  		},
+  		769: {
+  			items: 2
+  		},
+  		481: {
+  			items: 3
+  		},
+  		321: {
+  			items: 2
+  		}
+  	},
+  	loop:true
+  });
 
 });
 

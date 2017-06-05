@@ -45,34 +45,6 @@
 </head>
 <body>
 	<header class="m_header">
-		<div class="navigation">
-			<div class="wrap">
-				<nav class="menu">
-					<div>		
-						<div class="toggle-nav">
-						    <b class="visually-hidden">Open the navigation</b>
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-						<div>
-							<ul class="js-active">
-								<li class="menu__item--current">
-									<a href="index.html" class="menu__link">
-										Home
-									</a>
-								</li>
-								<li>
-									<a href="#" class="menu__link">
-									</a>
-								</li>							
-							</ul>
-						</div>
-					</div>
-				</nav>	
-			</div>			
-		</div>
 		<div class="m_header_wrap">
 			<div class="layer">
 				<div class="m_navigation_wrap">
@@ -93,13 +65,40 @@
 						</div>
 						<div class="clearfix"></div>
 					</div>
-					<div class="slider">
-						<div class="slider-item">
+					<div id="m_header-carousel" class="m_slider owl-carousel">
+						<div>
 							<h2>
 								БЕЛОСНЕЖНАЯ УЛЫБКА<br> СО СКИДКОЙ <span class="blue">50%</span>
 							</h2>
 							<p>
-								А если Вы еще хотите получить <span class="blue">50%</span>+<span class="blue">20%</span>+<span class="blue">5%</span>, то вам сюда
+								А если Вы еще хотите получить <span class="blue">50%</span>+<span class="blue">20%</span>+<span class="blue">5%</span>, то вам <a href="#"><span class="blue">сюда</span></a>
+							</p>
+							<button>Получить скидку &gt;</button>
+						</div>
+						<div>
+							<h2>
+								УЛЫБКА БЕЛОСНЕЖНАЯ<br> СО СКИДКОЙ <span class="blue">30%</span>
+							</h2>
+							<p>
+								Хотите получить <span class="blue">50%</span>+<span class="blue">20%</span>+<span class="blue">5%</span>? Вам <a href="#"><span class="blue">сюда</span></a>
+							</p>
+							<button>Получить скидку &gt;</button>
+						</div>
+						<div>
+							<h2>
+								БЕЛОСНЕЖНАЯ УЛЫБКА<br> СО СКИДКОЙ <span class="blue">50%</span>
+							</h2>
+							<p>
+								А если Вы еще хотите получить <span class="blue">50%</span>+<span class="blue">20%</span>+<span class="blue">5%</span>, то вам <a href="#"><span class="blue">сюда</span></a>
+							</p>
+							<button>Получить скидку &gt;</button>
+						</div>
+						<div>
+							<h2>
+								УЛЫБКА БЕЛОСНЕЖНАЯ<br> СО СКИДКОЙ <span class="blue">30%</span>
+							</h2>
+							<p>
+								Хотите получить <span class="blue">50%</span>+<span class="blue">20%</span>+<span class="blue">5%</span>? Вам <a href="#"><span class="blue">сюда</span></a>
 							</p>
 							<button>Получить скидку &gt;</button>
 						</div>
@@ -174,41 +173,43 @@
 			<div class="m_specialist_wrap">
 				<h2>Специалисты</h2>
 				<div class="m_specialist_hold">
-					<div class="m_single_specialist">
-						<img class="thumb" src="img/specialist1.png">
-						<div class="specialist_info">
-							<h3>Закаров Амин Магомедович</h3>
-							<hr>
-							<p>
-								Врач-стоматолог, кандидат медицинских наук, имеет высшую врачебную категорию.
-							</p>
-						</div>	
-					</div>
-					<div class="m_single_specialist">
-						<img class="thumb" src="img/specialist2.jpg">
-						<div class="specialist_info">
-							<h3>Лабина Валерия Владимировна</h3>
-							<hr>
-							<p>
-								Врач-стоматолог высшей категории
-							</p>
+					<div id="m_specialist-carousel" class="owl-carousel">
+						<div class="m_single_specialist">
+							<img class="thumb" src="img/specialist1.png">
+							<div class="specialist_info">
+								<h3><a href="#">Закаров Амин Магомедович</a></h3>
+								<div class="just_blue_rectangle"></div>
+								<p>
+									Врач-стоматолог, кандидат медицинских наук, имеет высшую врачебную категорию.
+								</p>
+							</div>	
 						</div>
-					</div>
-					<div class="m_single_specialist">
-						<img class="thumb" src="img/specialist3.jpg">
-						<div class="specialist_info">
-							<h3>Гамзатов Магомед Маматиевич</h3>
-							<hr>
-							<p>
-								Хирург-имплантолог
-							</p>
-						</div>	
+						<div class="m_single_specialist">
+							<img class="thumb" src="img/specialist2.jpg">
+							<div class="specialist_info">
+								<h3><a href="#">Лабина Валерия Владимировна</a></h3>
+								<div class="just_blue_rectangle"></div>
+								<p>
+									Врач-стоматолог высшей категории
+								</p>
+							</div>
+						</div>
+						<div class="m_single_specialist">
+							<img class="thumb" src="img/specialist3.jpg">
+							<div class="specialist_info">
+								<h3><a href="#">Гамзатов Магомед Маматиевич</a></h3>
+								<div class="just_blue_rectangle"></div>
+								<p>
+									Хирург-имплантолог
+								</p>
+							</div>	
+						</div>
 					</div>
 					<div class="clearfix"></div>
 					<div class="circle">
 						<img src="img/ellipse-with-border.png">
 					</div>
-				</div>				
+				</div>			
 			</div>
 			<div class="m_questions_wrap">
 				<h2 class="m_questions_header">Часто задаваемые вопросы</h2>
@@ -236,7 +237,7 @@
 				</div>
 			</div>
 			<div class="go_top_holder">
-				<div class="go_top">
+				<div id="to-top" class="go_top">
 					<img src="img/btn-to-top.png">
 					<span>Вверх<span>	
 				</div>

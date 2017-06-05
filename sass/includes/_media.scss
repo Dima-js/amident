@@ -281,6 +281,17 @@
             }
 
         }
+        header .m_header_wrap .layer .m_navigation_wrap .m_slider.owl-carousel{
+            .owl-dots{
+                bottom:10px;
+                right: 0;
+                transform:translateX(50%);
+                &.active{
+                    background-color: #50BDF3;
+                }
+            }
+        }
+
         header .m_header_wrap .layer {
             margin-top: 63px;
             min-height: 0;
@@ -290,7 +301,7 @@
                 .m_navigation{
                     top:-63px;
                 }
-                .slider {
+                .m_slider {
                 background-color: transparent;
                 padding-top:0px;
                 h2, p, button, span.blue{
@@ -521,7 +532,7 @@ main{
         }
         header .m_header_wrap .layer {
             .m_navigation_wrap{
-                .slider {
+                .m_slider {
                     h2 {
                         font-size: 20px;
                     }
@@ -848,7 +859,7 @@ main{
         }
     header .m_header_wrap .layer {
         .m_navigation_wrap{
-            .slider {
+            .m_slider {
                 width: 60%;
                 margin-top: -30px;
                 h2 {
