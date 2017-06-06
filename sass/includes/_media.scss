@@ -142,7 +142,27 @@
             padding: 0;
         }
     }
-
+    header .m_header_wrap .m_menu-parrent .m_nav .m_menu-wrap{
+        .m_stock_prices{
+            float: none;
+            width: 100%;
+            padding-left: 10%;
+            clear: both;
+        }
+        .m_main_stock{
+            float: none;
+            position: absolute;
+            top: 140px;
+            right: 4%;
+            width: 33%;
+            text-align: center;
+        }
+        .m_serv_about{
+            width: 66%;
+            float: none;
+            clear: both;
+        }
+    }
 }
 
 /* Small Devices, Tablets */
@@ -285,17 +305,36 @@
 
         }
 
-    }
-    header .m_header_wrap .layer {
-        margin-top: 63px;
-        min-height: 0;
-        background-size:cover;
-        background-repeat: no-repeat;
-        .m_navigation_wrap{
-            .m_navigation{
-                top:-63px;
+        }
+        header .m_header_wrap .m_menu-parrent .m_nav{
+            top: -63px;
+            h3{
+                font-size: 18px;
+                font-weight: 300;
+                padding: 10px 5px 10px 0;
             }
-            .slider {
+        }
+        header .m_header_wrap .layer .m_navigation_wrap .m_slider.owl-carousel{
+            .owl-dots{
+                bottom:10px;
+                right: 0;
+                transform:translateX(50%);
+                &.active{
+                    background-color: #50BDF3;
+                }
+            }
+        }
+
+        header .m_header_wrap .layer {
+            margin-top: 63px;
+            min-height: 0;
+            background-size:cover;
+            background-repeat: no-repeat;
+            .m_navigation_wrap{
+                .m_navigation{
+                    top:-63px;
+                }
+                .m_slider {
                 background-color: transparent;
                 padding-top:0px;
                 h2, p, button, span.blue{
@@ -306,12 +345,12 @@
                     padding: 20px;
                 }
 
+                }
+                .triangle_wrap {
+                    display: none;
+                }
             }
-            .triangle_wrap {
-                display: none;
-            }
-        }
-    }
+        }   
 
     .wrap_nav ul li.active a:before {
         content: '';
@@ -630,22 +669,34 @@ main{
                 transform: translateX(0);
             }
         }
-        header .m_header_wrap .layer {
-            .m_navigation_wrap{
-                .slider {
-                    h2 {
-                        font-size: 20px;
-                    }
-                    p{
-                        display: none;
-                    }
-                    button {
-                        border: 1px solid black;
-                        padding: 15px;
-                    }
+    header .m_header_wrap .m_menu-parrent .m_nav .m_menu-wrap{
+        .m_serv_about{
+            width: 100%;
+        }
+        .m_stock_prices{
+            padding-left: 0;
+        }
+        .m_main_stock{
+            position: static;
+            width: 100%;
+        }
+    }
+    header .m_header_wrap .layer {
+        .m_navigation_wrap{
+            .m_slider {
+                h2 {
+                    font-size: 20px;
+                }
+                p{
+                    display: none;
+                }
+                button {
+                    border: 1px solid black;
+                    padding: 15px;
                 }
             }
         }
+    }
 
     main{
         .m_slogan{
@@ -1158,16 +1209,48 @@ main{
 @media only screen and (max-width : 320px) {
 //mainPageHeader
     header .m_header_wrap .layer .m_navigation_wrap .m_navigation {
-            ul.left_menu li.white-logo{
-                padding-top: 5px;
-                width: 130px;
-                left: 62px;
-                transform: translateX(0);
+        ul.left_menu li.white-logo{
+            padding-top: 5px;
+            width: 130px;
+            left: 62px;
+            transform: translateX(0);
+        }
+    }
+    header .m_header_wrap .m_menu-parrent .m_nav .m_menu-wrap{
+        .m_serv_about{
+            padding-left: 10%;
+            ul{
+                float: none;
+                width: 100%;
+                clear: both;
+                li{
+                    padding-left: 0;
+                    padding-right: 0;
+                }
             }
         }
+
+        .m_stock_prices{
+            padding-left: 10%;
+            .m_stock_q{
+                float: none;
+                width: 100%;
+                clear: both;
+            }
+            .m_q{
+                display: none;
+            }
+        }
+        .m_main_stock{
+            display: none;
+        }
+    }
+    header .m_header_wrap .m_menu-parrent .m_nav{
+        min-height: 50px;
+    }
     header .m_header_wrap .layer {
         .m_navigation_wrap{
-            .slider {
+            .m_slider {
                 width: 60%;
                 margin-top: -30px;
                 h2 {
@@ -1186,17 +1269,20 @@ main{
     }
 // main
     main {
-        .m_questions_wrap, .m_slogan, .m_specialist_wrap, .go_top span, .main .m_article_left p, .m_article_right{
+        .m_questions_wrap, .m_slogan, .m_specialist_wrap, .go_top span, .m_article_left p, .m_article_right{
             display: none;
         }
         .main {
             .m_mobile_content{
                 display: block;
+                margin-bottom: 70px;
             }
             .m_article_left{
                 padding:0 3px;
-                p{
-                   &:first-of-type, &.reed_more {display: block;}
+                    p{
+                       &.you_will_see_me_always, &.m_reed_more {
+                        display: block;
+                    }
                 }
             }
         }

@@ -45,41 +45,68 @@
 </head>
 <body>
 	<header class="m_header">
-		<div class="navigation">
-			<div class="wrap">
-				<nav class="menu">
-					<div>		
-						<div class="toggle-nav">
-						    <b class="visually-hidden">Open the navigation</b>
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
+		<div class="m_header_wrap">
+			<div class="m_menu-parrent">
+				<nav class="m_nav">
+					<div class="m_menu-toggle_active_holder">
+						<div class="m_menu-toggle_active">
+							<img src="img/btn-menu.png" alt="Menu">
+							<span>МЕНЮ</span>
 						</div>
-						<div>
-							<ul class="js-active">
-								<li class="menu__item--current">
-									<a href="index.html" class="menu__link">
-										Home
-									</a>
-								</li>
-								<li>
-									<a href="#" class="menu__link">
-									</a>
-								</li>							
+						<img class="m_close_menu" src="img/gtk-close_4906.png">
+						<div class="clearfix"></div>				
+					</div>
+					<div class="m_menu-wrap">
+						<div class="m_serv_about">
+							<ul id="m_serv_content"><h3 id="m_serv"><a href="#">УСЛУГИ</a></h3>
+								<li><a href="#">Имплантология</a></li>
+								<li><a href="#">Реставрация зубов</a></li>
+								<li><a href="#">Терапия</a></li>
+								<li><a href="#">Ортопедия</a></li>
+								<li><a href="#">Ортодонтия</a></li>
+								<li><a href="#">Эндодонтия</a></li>
+								<li><a href="#">Отбеливание зубов</a></li>
+								<li><a href="#">Хирургия</a></li>
+								<li><a href="#">Пародонтология</a></li>
+							</ul>
+							<ul id="m_about_content"><h3 id="m_about"><a href="#">О КЛИНИКЕ</a></h3>
+								<li><a href="#">О нас</a></li>
+								<li class="m_have_more"><a href="#">Наша команда</a></li>
+								<li><a href="#">Наши партнеры</a></li>
+								<li class="m_have_more"><a href="#">Жизнь компании</a></li>
+								<li class="m_have_more"><a href="#">Звездные  гости</a></li>
 							</ul>
 						</div>
+						<div class="m_stock_prices">
+							<div class="m_stock_q">
+								<h3 class="m_stock"><a href="#">АКЦИИ</a></h3>
+								<ul class="m_q"><h3><a href="#">ВОПРОС - ОТВЕТ</a></h3>
+									<li><a href="#">Часто задаваемые вопросы</a></li>
+									<li class="m_have_more"><a href="#">Полезная информация</a></li>
+								</ul>
+							</div>
+							<div class="m_prices">
+								<h3><a href="#">ЦЕНЫ</a></h3>
+								<h3><a href="#">НАШИ РАБОТЫ</a></h3>
+								<h3><a href="#">ОТЗЫВЫ</a></h3>
+								<h3><a href="#">КОНТАКТЫ</a></h3>
+							</div>
+							<div class="clearfix"></div>
+						</div>					
+						<div class="m_main_stock">
+							<a href="#"><img src="img/smile.jpg"></a>
+							<p><a href="#">АКЦИЯ!</a> Голивудская улыбка со скидкой 20%</p>
+						</div>
+						<div class="clearfix"></div>					
 					</div>
-				</nav>	
-			</div>			
-		</div>
-		<div class="m_header_wrap">
+				</nav>
+			</div>
 			<div class="layer">
 				<div class="m_navigation_wrap">
 					<div class="m_navigation">
 						<ul class="left_menu">
 							<li class="white-logo"><img src="img/white-logo.png"></li>
-							<li class="m_menu-toggle"><a href="index.html"><img src="img/btn-menu.png"></a></li>
+							<li class="m_menu-toggle"><img src="img/btn-menu.png"></li>
 							<li class="menu-item"><a href="./Services">УСЛУГИ</a></li>
 							<li class="menu-item"><a href="./Prices">ЦЕНЫ</a></li>
 						</ul>
@@ -93,13 +120,40 @@
 						</div>
 						<div class="clearfix"></div>
 					</div>
-					<div class="slider">
-						<div class="slider-item">
+					<div id="m_header-carousel" class="m_slider owl-carousel">
+						<div>
 							<h2>
 								БЕЛОСНЕЖНАЯ УЛЫБКА<br> СО СКИДКОЙ <span class="blue">50%</span>
 							</h2>
 							<p>
-								А если Вы еще хотите получить <span class="blue">50%</span>+<span class="blue">20%</span>+<span class="blue">5%</span>, то вам сюда
+								А если Вы еще хотите получить <span class="blue">50%</span>+<span class="blue">20%</span>+<span class="blue">5%</span>, то вам <a href="#"><span class="blue">сюда</span></a>
+							</p>
+							<button>Получить скидку &gt;</button>
+						</div>
+						<div>
+							<h2>
+								УЛЫБКА БЕЛОСНЕЖНАЯ<br> СО СКИДКОЙ <span class="blue">30%</span>
+							</h2>
+							<p>
+								Хотите получить <span class="blue">50%</span>+<span class="blue">20%</span>+<span class="blue">5%</span>? Вам <a href="#"><span class="blue">сюда</span></a>
+							</p>
+							<button>Получить скидку &gt;</button>
+						</div>
+						<div>
+							<h2>
+								БЕЛОСНЕЖНАЯ УЛЫБКА<br> СО СКИДКОЙ <span class="blue">50%</span>
+							</h2>
+							<p>
+								А если Вы еще хотите получить <span class="blue">50%</span>+<span class="blue">20%</span>+<span class="blue">5%</span>, то вам <a href="#"><span class="blue">сюда</span></a>
+							</p>
+							<button>Получить скидку &gt;</button>
+						</div>
+						<div>
+							<h2>
+								УЛЫБКА БЕЛОСНЕЖНАЯ<br> СО СКИДКОЙ <span class="blue">30%</span>
+							</h2>
+							<p>
+								Хотите получить <span class="blue">50%</span>+<span class="blue">20%</span>+<span class="blue">5%</span>? Вам <a href="#"><span class="blue">сюда</span></a>
 							</p>
 							<button>Получить скидку &gt;</button>
 						</div>
@@ -128,18 +182,24 @@
 				<h2>
 					Клиника «АминДент»
 				</h2>
-				<p>
+				<p class="you_will_see_me_always">
 					«Эстетическая стоматология» дает мне возможность самореализации и получения удовольствия от процесса создания нового образа моих пациентов. Для меня лечение зубов – это, в первую очередь, шанс сделать вас немножечко счастливее!
 				</p>
-				<p>	
+				<p class="hide_me_on_small_screens">	
 					Ежегодное посещение программ повышения квалификации, обмену опытом, участие и победы в международных программах в области эстетической стоматологии и реставрации зубов, дают мне возможность усовершенствовать мой профессионализм и доставлять удовольствие от полученного результата, проделанной мной работы. Самым дорогим для меня, является благодарность моих пациентов, которая наглядно отражает уровень моей компетентности в области стоматологии.
 				</p>
-				<p class="reed_more">
+				<p id="m_reed_more" class="m_reed_more">
 					читать далее &raquo;
 				</p>
-				<p style="display: none;">
-					Главное в стоматологии - конечный результат, когда преображение внешнего 
-				<p>
+				<p class="m_reed_me">
+					Главное в стоматологии - конечный результат, когда преображение внешнего. Самым дорогим для меня, является благодарность моих пациентов, которая наглядно отражает уровень моей компетентности в области стоматологии. 
+				</p>
+				<p class="m_reed_me">	
+					Возможность  доставлять удовольствие и усовершенствовать мой профессионализм  от полученного результата, проделанной мной работы. обмену опытом, участие и победы в международных программах в области эстетической стоматологии и реставрации зубов, дают мне возможность усовершенствовать мой профессионализм и доставлять удовольствие от полученного результата, проделанной мной работы. Самым дорогим для меня, является благодарность моих пациентов, которая наглядно отражает уровень моей компетентности в области стоматологии.
+				</p>
+				<p id="m_reed_less" class="m_reed_more" style="display: none;">
+					<span class="rotate_me_top">&laquo;</span> свернуть 
+				</p>
 			</div>
 			<div class="m_article_right">
 				<div class="gutter">
@@ -174,41 +234,43 @@
 			<div class="m_specialist_wrap">
 				<h2>Специалисты</h2>
 				<div class="m_specialist_hold">
-					<div class="m_single_specialist">
-						<img class="thumb" src="img/specialist1.png">
-						<div class="specialist_info">
-							<h3>Закаров Амин Магомедович</h3>
-							<hr>
-							<p>
-								Врач-стоматолог, кандидат медицинских наук, имеет высшую врачебную категорию.
-							</p>
-						</div>	
-					</div>
-					<div class="m_single_specialist">
-						<img class="thumb" src="img/specialist2.jpg">
-						<div class="specialist_info">
-							<h3>Лабина Валерия Владимировна</h3>
-							<hr>
-							<p>
-								Врач-стоматолог высшей категории
-							</p>
+					<div id="m_specialist-carousel" class="owl-carousel">
+						<div class="m_single_specialist">
+							<img class="thumb" src="img/specialist1.png">
+							<div class="specialist_info">
+								<h3><a href="#">Закаров Амин Магомедович</a></h3>
+								<div class="just_blue_rectangle"></div>
+								<p>
+									Врач-стоматолог, кандидат медицинских наук, имеет высшую врачебную категорию.
+								</p>
+							</div>	
+						</div>
+						<div class="m_single_specialist">
+							<img class="thumb" src="img/specialist2.jpg">
+							<div class="specialist_info">
+								<h3><a href="#">Лабина Валерия Владимировна</a></h3>
+								<div class="just_blue_rectangle"></div>
+								<p>
+									Врач-стоматолог высшей категории
+								</p>
+							</div>
+						</div>
+						<div class="m_single_specialist">
+							<img class="thumb" src="img/specialist3.jpg">
+							<div class="specialist_info">
+								<h3><a href="#">Гамзатов Магомед Маматиевич</a></h3>
+								<div class="just_blue_rectangle"></div>
+								<p>
+									Хирург-имплантолог
+								</p>
+							</div>	
 						</div>
 					</div>
-					<div class="m_single_specialist">
-						<img class="thumb" src="img/specialist3.jpg">
-						<div class="specialist_info">
-							<h3>Гамзатов Магомед Маматиевич</h3>
-							<hr>
-							<p>
-								Хирург-имплантолог
-							</p>
-						</div>	
-					</div>
 					<div class="clearfix"></div>
-					<div class="circle">
-						<img src="img/ellipse-with-border.png">
+					<div class="m_range">
+						<input id="spec_control" class="spec_control" type="range" min="0" max="100" step="1" value="20">
 					</div>
-				</div>				
+				</div>			
 			</div>
 			<div class="m_questions_wrap">
 				<h2 class="m_questions_header">Часто задаваемые вопросы</h2>
@@ -236,7 +298,7 @@
 				</div>
 			</div>
 			<div class="go_top_holder">
-				<div class="go_top">
+				<div id="to-top" class="go_top">
 					<img src="img/btn-to-top.png">
 					<span>Вверх<span>	
 				</div>
@@ -245,8 +307,111 @@
 		</div>
 	</main>
 	<footer>
-		<div class="wrap">
-				
+		<div class="wrapper">
+			<ul class="footer-top">
+				<li>
+					<a href="#">Имплантология</a>
+				</li>
+				<li>
+					<a href="#">Реставрация зубов</a>
+				</li>
+				<li>
+					<a href="#">Терапия</a>
+				</li>
+				<li>
+					<a href="#">Ортопедия</a>
+				</li>
+				<li>
+					<a href="#">Ортодонтия</a>
+				</li>
+				<li>
+					<a href="#">Эндодонтия</a>
+				</li>
+				<li>
+					<a href="#">Отбеливание зубов</a>
+				</li>
+				<li>
+					<a href="#">Хирургия</a>
+				</li>
+				<li>
+					<a href="#">Пародонтология</a>
+				</li>
+			</ul>
+			<div class="footer-bottom">
+				<div class="footer-bottom-copyright">
+					<p>© 2016 «АмиДент» Эстетическая стоматология</p>
+					<p>Лицензия № ЛО77-01-005282</p>
+				</div>
+				<div class="footer-bottom-contacts">
+					<div class="footer-bottom-phones-list">
+						<div class="main-phone">
+							<a href="tel:+74957686838">+7 (495) 768-68-38</a>
+						</div>
+						<div class="more-phones">
+							<a href="tel:+79857686838">+7 (985) 768-68-38</a>
+							<a href="tel:+74956886078">+7 (495) 688-60-78</a>
+						</div>
+					</div>
+					<div class="footer-bottom-address">
+						Москва, 3-я улица Марьиной рощи, д.4, кор.2
+					</div>
+				</div>
+				<div class="footer-bottom-social">
+					<ul class="footer-bottom-social-list">
+						<li>
+							<a href="#" title="Facebook">
+								<img src="/img/facebook.png" alt="Facebook">
+							</a>
+						</li>
+						<li>
+							<a href="#" title="VK">
+								<img src="/img/vk.png" alt="VK">
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Instagram">
+								<img src="/img/instagram.png" alt="Instagram">
+							</a>
+						</li>
+					</ul>
+					<a href="#" class="site-creation">
+						<span>создание сайта</span>
+						<img src="/img/development.png" alt="LDM +">
+					</a>
+				</div>
+			</div>
+			<div class="footer-mobile">
+				<ul>
+					<li class="footer-mobile-services">
+						<a href="#">
+							Услуги
+						</a>
+					</li>
+					<li class="footer-mobile-price">
+						<a href="#">
+							<img src="/img/price-icon.png" alt="Price icon">
+							Цены
+						</a>
+					</li>
+					<li class="footer-mobile-call">
+						<a href="#">
+							<img src="/img/phone-white.png" alt="Phone icon">
+							Позвонить
+						</a>
+						<div class="phones-tooltip">
+							<a href="tel:+78129261063">
+								+7 (812) 926-10-63
+							</a>
+							<a href="tel:+78129281063">
+								+7 (812) 928-10-63
+							</a>
+							<a href="tel:+78129863334">
+								+7 (812) 986-33-34
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</footer>
 	<!--[if lt IE 9]>
