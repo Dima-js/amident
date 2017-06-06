@@ -950,7 +950,7 @@ main{
     }  
 // main
     main {
-        .m_questions_wrap, .m_slogan, .m_specialist_wrap, .go_top span, .main .m_article_left p, .m_article_right{
+        .m_questions_wrap, .m_slogan, .m_specialist_wrap, .go_top span, .m_article_left p, .m_article_right{
             display: none;
         }
         .main {
@@ -959,8 +959,10 @@ main{
             }
             .m_article_left{
                 padding:0 3px;
-                p{
-                   &:first-of-type, &.reed_more {display: block;}
+                    p{
+                       &.you_will_see_me_always, &.m_reed_more {
+                        display: block;
+                    }
                 }
             }
         }
